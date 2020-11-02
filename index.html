@@ -20,7 +20,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <span class="d-block d-lg-none">Tips of the day</span>
                 <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/profile/virtuslab.png" alt="VirtusLab" /></span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -81,7 +81,7 @@
 
                     <div class="tip">
                         <div class="tip-content">
-                            <h3>Force push and hard reset</h3>
+                            <h3>Previous branch shortcut</h3>
                             <p>
                                 Use <q>git checkout -</q> or <q>git switch -</q> to check out the <strong>previously checked-out branch</strong> <img class="emoji" src="leftwards_arrow_with_hook"/> <br/>
                                 The same also works with <q>git merge -</q>, <q>git rebase -</q> and <q>git cherry-pick -</q> <img class="emoji" src="cherries"/> <img class="emoji" src="pick"/>
@@ -96,6 +96,68 @@
                 </div>
             </section>
             <hr class="m-0" />
+
+
+
+            <!-- Regex tips-->
+            <section class="tips-section" id="regex-tips">
+                <div class="tips-content">
+                    <h2>Regex tips</h2>
+
+                    <div class="tip">
+                        <div class="tip-content">
+                            <h3>Operators precedence</h3>
+                            <p>
+                                <q>^foo|bar$</q> won't just match strings <q>foo</q> and <q>bar</q>, but also e.g. <q>foo_123</q> and <q>rabarbar</q> <img class="emoji" src="fuggg"/>
+                            </p>
+                            <p>
+                                In fact, the (simplified) precedence of operators in regexes is, from strongest to weakest:
+                                <ol>
+                                    <li>Duplication: <q>a*</q>, <q>b+</q>, <q>c?</q></li>
+                                    <li>Concatenation i.e. plain "neighbourhood": <q>ab</q>, <q>c$</q>, <q>^def</q></li>
+                                    <li>Alternative: <q>a|b</q></li>
+                                </ol>
+                            </p>
+                            <p>
+                                <q>^foo|bar$</q> means <q>("foo" at the start) OR ("bar" at the end)</q> <img class="emoji" src="sad-spurdo"/> <br/>
+                                Use <q>^(foo|bar)$</q> instead <img class="emoji" src="bangbang"/>
+                            </p>
+                        </div>
+                        <div class="date">30 March 2020</div>
+                    </div>
+
+                    <div class="tip">
+                        <div class="tip-content">
+                            <h3>Lookbehind/lookahead</h3>
+                            <p>
+                                Most regex engines allow you to specify that the given string <strong>must/must not</strong> be <strong>preceded/followed by</strong> another string... this relatively unknown feature is called <i>positive/negative lookbehind/lookahead</i> (collectively: <i>lookarounds</i>):
+                                <ul>
+                                    <li><q>(?<=foo|bar)qux</q> will only capture <q>qux</q> occurrences preceded by <q>foo</q> or <q>bar</q> (positive lookbehind)
+                                    <li><q>(?&lt;!foo|bar)qux</q> will only capture <q>qux</q> occurrences NOT preceded by <q>foo</q> or <q>bar</q> (negative lookbehind)</li>
+                                    <li><q>qux(?=foo|bar)</q> will only capture <q>qux</q> occurrences followed by <q>foo</q> or <q>bar</q> (positive lookahead)</li>
+                                    <li><q>qux(?!foo|bar)</q> will only capture <q>qux</q> occurrences NOT followed by <q>foo</q> or <q>bar</q> (negative lookahead)</li>
+                                </ul>
+                            </p>
+                            <p>
+                                This is supported by default by Java/Kotlin/Scala, Python, JS (lookahead only); in <q>git grep</q>/GNU <q>grep</q>, you need to pass <q>turbo mode</q> aka <q>-P</q>/<q>--perl-regexp</q> flag
+                            </p>
+                            <p>
+                                In <q>grep</q>, this is esp. useful in combination with <q>-o</q> (aka <q>--only-matching</q>, prints only the part matching the regex, not the whole matched line):
+                                <code>
+                                grep -Po "(?<=version = ')[0-9]+\.[0-9]+\.[0-9]+"
+                                </code>
+                            </p>
+                            <p>
+                                On <q>version = '1.2.3'</q> input, it'll simply print the matched part (<q>1.2.3</q>); lookarounds only tell about the context but aren't part of the matched string itself.
+                            </p>
+                        </div>
+                        <div class="date">8 April 2020</div>
+                    </div>
+
+                </div>
+            </section>
+            <hr class="m-0" />
+
 
         </div>
         <!-- Bootstrap core JS-->

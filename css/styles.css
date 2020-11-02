@@ -178,7 +178,6 @@ a:not([href]):hover {
 }
 
 pre,
-code,
 kbd,
 samp {
   font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -503,8 +502,6 @@ mark,
 }
 
 code {
-  font-size: 87.5%;
-  color: #e83e8c;
   word-wrap: break-word;
 }
 a > code {
@@ -10164,6 +10161,7 @@ section.tips-section .tips-content {
   color: #bd5d38 !important;
 }
 
+code,
 q {
   quotes: none;
   border: 1px solid #d9d9d9;
@@ -10176,4 +10174,10 @@ q {
 
 .emoji {
   height: 1.4rem;
+}
+
+code {
+  display: block;
+  color: #6f6f6f;
+  margin: 5px 0px;
 }
