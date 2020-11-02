@@ -10173,3 +10173,7 @@ q {
   font-family: 'Roboto Mono', monospace;
   font-size: 90%;
 }
+
+.emoji {
+  height: 1.4rem;
+}
