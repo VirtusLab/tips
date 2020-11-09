@@ -1,0 +1,25 @@
+.tip .date {
+  flex-shrink: 0!important;
+  color: #bd5d38!important
+}
+
+code,
+q {
+  quotes: none;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: #e12761;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 90%
+}
+
+.emoji {
+  height: 1.4rem
+}
+
+code {
+  display: block;
+  color: #6f6f6f;
+  margin: 5px 0
+}

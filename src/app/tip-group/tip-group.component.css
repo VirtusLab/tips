@@ -1,0 +1,11 @@
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible
+}
+
+
+
+.tip-content h3 {
+  margin-bottom: 1rem!important
+}
