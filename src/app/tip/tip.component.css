@@ -3,7 +3,8 @@
   color: #bd5d38!important
 }
 
-::ng-deep code {
+::ng-deep code,
+::ng-deep blockquote {
   quotes: none;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
@@ -17,9 +18,12 @@
   height: 1.4rem
 }
 
-/*code {
+::ng-deep blockquote {
   display: block;
   color: #6f6f6f;
-  margin: 5px 0
+  margin: 0 0 1rem 0;
 }
-*/
+
+::ng-deep blockquote p {
+  margin: 0;
+}

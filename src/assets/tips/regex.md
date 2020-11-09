@@ -24,8 +24,8 @@ Most regex engines allow you to specify that the given string **must/must not** 
 This is supported by default by Java/Kotlin/Scala, Python, JS (lookahead only); in `git grep`/GNU `grep`, you need to pass `turbo mode` aka `-P`/`--perl-regexp` flag
 
 In `grep`, this is esp. useful in combination with `-o` (aka `--only-matching`, prints only the part matching the regex, not the whole matched line):
-```
-grep -Po "(?<=version = ')[0-9]+\.[0-9]+\.[0-9]+"
-```
+
+> grep -Po "(?<=version = ')[0-9]+\.[0-9]+\.[0-9]+"
+
 
 On `version = '1.2.3'` input, it'll simply print the matched part (`1.2.3`); lookarounds only tell about the context but aren't part of the matched string itself.
