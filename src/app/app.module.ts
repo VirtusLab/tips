@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { MarkdownModule, MarkedOptions, MarkedRenderer } from 'ngx-markdown';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -21,9 +22,32 @@ import { TipGroupComponent } from './tip-group/tip-group.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    MarkdownModule.forRoot({
+      markedOptions: {
+        provide: MarkedOptions,
+        useFactory: markedOptionsFactory,
+      },
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function markedOptionsFactory(): MarkedOptions {
+  const renderer = new MarkedRenderer();
+
+  renderer.image = (href: string, title: string, text: string) => {
+    return '<img src="assets/emoji/' + href + (text === 'a' ? '.gif' : '.png') + '" title="' + href + '" alt="' + href + '" class="emoji"/>';
+  }
+
+  return {
+    renderer: renderer,
+    gfm: true,
+    breaks: false,
+    pedantic: false,
+    smartLists: true,
+    smartypants: false,
+  };
+}

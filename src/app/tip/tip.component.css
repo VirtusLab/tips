@@ -3,8 +3,7 @@
   color: #bd5d38!important
 }
 
-code,
-q {
+::ng-deep code {
   quotes: none;
   border: 1px solid #d9d9d9;
   border-radius: 5px;
@@ -14,12 +13,13 @@ q {
   font-size: 90%
 }
 
-.emoji {
+::ng-deep .emoji {
   height: 1.4rem
 }
 
-code {
+/*code {
   display: block;
   color: #6f6f6f;
   margin: 5px 0
 }
+*/

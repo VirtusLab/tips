@@ -1,18 +1,7 @@
 <div class="tip">
   <div class="tip-content">
-    <h3>Force push and hard reset</h3>
-    <p>
-      <strong>Do not</strong> use <q>git push --force</q>. Use <q>git push --force-with-lease</q> <img class="emoji" src="muscle"/> <br/>
-      This will prevent you from accidentally overwriting the history pushed to the same branch by someone else in the meantime.
-    </p>
-    <p>
-      <strong>Do not</strong> use <q>git reset --hrad</q>. Use <q>git reset --keep</q> <img class="emoji animated" src="hard-hat-parrot"/> <br/>
-      This will prevent you from accidentally losing uncommitted files.
-    </p>
-    <p>
-      For more details, see <a href="http://slides.com/plipski/git-linear-history#/3">http://slides.com/plipski/git-linear-history#/3</a>
-      and <a href="http://slides.com/plipski/git-linear-history#/7">http://slides.com/plipski/git-linear-history#/7</a>
-    </p>
+    <h3>{{tipName}}</h3>
+    <markdown [data]="tipContent"></markdown>
   </div>
-  <div class="date">25 March 2020</div>
+  <div class="date">{{tipDate}}</div>
 </div>
