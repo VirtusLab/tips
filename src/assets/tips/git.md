@@ -4,7 +4,7 @@ Force push and hard reset
 **Do not** use `git push --force`. Use `git push --force-with-lease` ![](muscle) <br/>
 This will prevent you from accidentally overwriting the history pushed to the same branch by someone else in the meantime.
 
-**Do not** use `git reset --hrad`. Use `git reset --keep` ![a](hard-hat-parrot) <br/>
+**Do not** use `git reset --hard`. Use `git reset --keep` ![a](hard-hat-parrot) <br/>
 This will prevent you from accidentally losing uncommitted files.
 
 For more details, see http://slides.com/plipski/git-linear-history#/3 and http://slides.com/plipski/git-linear-history#/7
