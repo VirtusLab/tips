@@ -8,7 +8,7 @@ import {Tip} from "./tip";
 })
 export class TipsService {
   private tipBaseUrl: string = "assets/tips/";
-  private tipsSeparator: RegExp = /=======\n/
+  private tipsSeparator: RegExp = /^## /gm
   public tips = {};
 
   constructor(private http: HttpClient) {}
@@ -26,14 +26,13 @@ export class TipsService {
 
   private async parseTipFile(tipsFileContent: Promise<string>): Promise<Tips> {
     const content = await tipsFileContent;
-    const splittedContent = content.split(this.tipsSeparator);
+    const splittedContent = content.split(this.tipsSeparator).slice(1);
     const tips: Tips = [];
     for(let singleTipContent of splittedContent) {
-      const splittedSingleTipContent = singleTipContent.split(/\n/);
       const tip: Tip = {
-        name: splittedSingleTipContent[0],
-        date: splittedSingleTipContent[1],
-        content: splittedSingleTipContent.slice(3).join("\n")
+        name: singleTipContent.match(/^\s*(.*)\s*\n/)[1],
+        date: singleTipContent.match(/^###\s(.*)\s*$/m)[1],
+        content: singleTipContent.split(/\n/).slice(1).filter(string => !string.match(/^###\s+/)).join("\n")
       }
       tips.push(tip);
     }
