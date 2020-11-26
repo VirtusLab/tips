@@ -31,12 +31,12 @@ export class TipsService {
     for(let singleTipContent of splittedContent) {
       const tip: Tip = {
         name: singleTipContent.match(/^\s*(.*)\s*\n/)[1],
-        date: singleTipContent.match(/^###\s(.*)\s*$/m)[1],
+        date: new Date(singleTipContent.match(/^###\s(.*)\s*$/m)[1]),
         content: singleTipContent.split(/\n/).slice(1).filter(string => !string.match(/^###\s+/)).join("\n")
       }
       tips.push(tip);
     }
 
-    return tips;
+    return tips.sort((a: Tip, b: Tip) => b.date.getTime() - a.date.getTime());
   }
 }

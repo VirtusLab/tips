@@ -1,5 +1,5 @@
 export interface Tip {
   name: string,
-  date: string,
+  date: Date,
   content: string
 }
