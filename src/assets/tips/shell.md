@@ -44,3 +44,26 @@ exits with non-zero as well.
 `set -u` makes sure that an attempt to reference an **unassigned variable** `$foo`
 causes the script to immediately exit with an error (rather than resolve `$foo` to an empty string)  ![a](shell-party)<br/>
 Tip: `${foo-}` will simulate the default behavior in the `set -u` mode.
+
+
+## In/Out redirections
+### 19 May 20202
+
+To pass a string verbatim as stdin to
+a shell (bash/zsh) command, use `<<<`: `./my-command <<< "Hello world"`
+
+Note that this will include a trailing
+newline, which might sometimes be
+undesired (e.g. in the input to `base64`) ![a](shell-party)
+
+To redirect both stdout and stderr
+to the same file, use `&>`: `./my-command &>/dev/null` ![](and)
+
+To slurp file contents into a var,
+use `$(<...)`:`foo=$(<foo.txt)`; in particular,
+use `$(</dev/stdin)` to read the entire stdin ![a](pacman)
+
+To put verbatim tab/newline etc. characters
+into a shell string, use `$'....'`-style
+strings instead of regular `'...'` or `"..."`: <br/>
+`./my-command "this is " $'my string \t\n'` ![](money_mouth_face)

@@ -22,3 +22,79 @@ the machine &mdash; which is typically **different from UTC**! ![a](pepepanic)
 As a rule of thumb, always use `java.time.ZonedDateTime` (on JVM),
 `TIMESTAMP WITH TIME ZONE` (in SQL) or generally: the timestamp types
 for the given platform/DB that actually represent a specific point in time. ![](spurdo-thumbs-up)
+
+
+## Compression (zip vs tar.gz)
+### 28 Apr 2020
+
+You might have the impression that **zip** and
+**tar.gz** are basically kinda-equivalent archive
+formats, just differing in technicalities like
+compression algorithms... but there's actually
+an important conceptual difference ![](goncern)
+
+**zip** is an **uncompressed archive** of **compressed
+files**. Extracting a single file (`unzip <archive>
+<path/to/file>`) is quick; overall compression
+is weaker because zip doesn't take advantage
+of content similarities between files ![](microsoft)
+
+**tar.gz** is a **compressed archive** of **uncompressed
+files**. Extracting a single file is generally impossible
+without decompressing the entire archive;
+overall compression is better because tar.gz takes
+advantage of content similarities between files ![](biedux)
+
+This trade-off starts to be meaningful for large
+archives with many files inside; unless you need
+to be Windows-compatible or need to quickly extract
+a selected file from the archive, you likely
+want to use tar.gz ![a](head-banging-parrot)
+
+
+## Listing Java processes
+### 30 Apr 2020
+
+To list running `java` processes,
+instead of brittle constructs like
+`ps aux | grep java`, use Oracle
+JDK's/OpenJDK's `jps -ml` ![](java)
+
+> $ jps -ml <br/>
+> 2102755 /usr/share/sbt/bin/sbt-launch.jar <br/>
+> 2101064 com.intellij.idea.Main <br/>
+> 2107882 jdk.jcmd/sun.tools.jps.Jps -ml <br/>
+
+As opposed to `ps aux | grep java`, this only
+lists the PIDs of actual `java` processes and
+not the ones that just happen to contain
+`java` in their args; also, JVM params (that
+are typically less important) are skipped
+unless `-v` option is provided; only main
+class names (`-l` for FQCN) and invocation
+params (`-m`) are listed ![a](shell-party)
+
+
+## Dependency (Hell) Management
+### 22 May 2020
+
+Modern dep management systems can be (roughly, many shades in-between exist)
+divided into 2 major groups based on the answer to the question: <br/>
+**Should deps of package X be provided to/shipped with package X in the
+exact versions required by X**? ![](package) <br/>
+This is in fact pretty similar to: **can any package Y live in the runtime env
+in 2+ different versions**? ![a](twins-parrot)
+
+Common OS package managers (`apt`, `yum`/`dnf`) and dep resolution tools for
+programming langs (Maven, Gradle, sbt; pip) generally answer **NO** to both questions ![](nie) <br/>
+The resulting platform (OS, JVM etc.) has exactly one version of each dep. <br/>
+This enables easy updates (esp. in case of bugs/security problems): each dep needs
+to be updated in just one place (`*`), but at the cost of possibly not being able
+to find a combination of (dep, version) pairs so that each dep's compatibility
+constraints are satisfied (`**`), hence the hell ![](exploding_head)
+
+Snap(py) package manager for Linuxes; Docker; OSGi for JVM generally answer
+**YES** to both questions ![](spurdo-thumbs-up) <br/>
+Each snap/Docker image/OSGi bundle has all its transitive deps baked in;
+(`**`) is pretty much non-existent, but each dep needs to be separately
+updated in every place it's referenced (as opposed to `*`) ![](docker)

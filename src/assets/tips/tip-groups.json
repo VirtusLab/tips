@@ -1,5 +1,9 @@
 [
   {
+    "id": "docker",
+    "name": "Docker tips"
+  },
+  {
     "id": "git",
     "name": "Git tips"
   },
