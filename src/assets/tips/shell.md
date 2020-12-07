@@ -3,7 +3,7 @@
 
 Very often there's a need to compare the outputs of two shell commands ![](scales)<br/>
 Of course one might simply save each output separately into a file and `diff` the files...
-but in bash/zsh there's an easier way called *process substitution*:
+but in bash/zsh there's an easier way called _process substitution_:
 
 `diff -u <(./command1 --option args) <(./command2 --option args)`
 
@@ -12,22 +12,22 @@ to the `diff` executable look like ![](sleuth_or_spy)
 
 `diff -u /dev/fd/63 /dev/fd/62`
 
-The shell created two *[named pipes](https://en.wikipedia.org/wiki/Named_pipe)*, and `diff` simply
+The shell created two _[named pipes](https://en.wikipedia.org/wiki/Named_pipe)_, and `diff` simply
 treats them as files to compare ![](pipe)
 
-Btw, the `-u` (aka `--unified`) option isn't related to the substitution mechanism -
+Btw, the `-u` (aka `--unified`) option isn't related to the substitution mechanism &mdash;
 it's just making the `diff` output more palatable/more git-like with differing lines
 marked by `+` and `-` ![](git)<br/>
-Also, check `colordiff` for green/red output ![](art)
+Also, check [colordiff](https://www.colordiff.org/) for green/red output ![](art)
 
 
 ## Strict mode
 ### 14 Apr 2020
 
 For production/CI-related shell (sh/bash) scripts, you pretty much always want to use
-so-called *strict mode* ![](grammar-nazi)
+so-called _strict mode_ ![](grammar-nazi)
 
-> set -e -o pipefail -u
+`set -e -o pipefail -u`
 
 By default, nothing special happens after a command in a script ends up with
 **a non-zero exit status** ![](shrug)<br/>

@@ -7,7 +7,8 @@ This will prevent you from accidentally overwriting the history pushed to the sa
 **Do not** use `git reset --hard`. Use `git reset --keep` ![a](hard-hat-parrot) <br/>
 This will prevent you from accidentally losing uncommitted files.
 
-For more details, see http://slides.com/plipski/git-linear-history#/3 and http://slides.com/plipski/git-linear-history#/7
+For more details, see [slide 3](http://slides.com/plipski/git-linear-history#/3) and [slide 7](http://slides.com/plipski/git-linear-history#/7)
+from Paweł Lipski's `Painless Linear History in Git` presentation
 
 
 ## Previous branch shortcut

@@ -15,7 +15,7 @@ Use `^(foo|bar)$` instead ![](bangbang)
 ## Lookbehind/lookahead
 ### 8 April 2020
 
-Most regex engines allow you to specify that the given string **must/must not** be **preceded/followed by** another string... this relatively unknown feature is called *positive/negative lookbehind/lookahead* (collectively: *lookarounds*) ![a](hmm)
+Most regex engines allow you to specify that the given string **must/must not** be **preceded/followed by** another string... this relatively unknown feature is called _positive/negative lookbehind/lookahead_ (collectively: *lookarounds*) ![a](hmm)
 * `(?<=foo|bar)qux` will only capture `qux` occurrences preceded by `foo` or `bar` (positive lookbehind) ![](arrow_left) ![a](thumbsup_all)
 * `(?<!foo|bar)qux` will only capture `qux` occurrences NOT preceded by `foo` or `bar` (negative lookbehind) ![](arrow_left) ![](thumbsdown)
 * `qux(?=foo|bar)` will only capture `qux` occurrences followed by `foo` or `bar` (positive lookahead) ![](arrow_right) ![a](thumbsup_all)
