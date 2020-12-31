@@ -3,12 +3,12 @@
 
 Docker images tend to get bloated (1GB+) very quickly after
 installing extra software... even if the base image is
-a lightweight `alpine` or `debian:slim` ![](blowfish)
+a lightweight `alpine` ![](blowfish)
 
 Make sure the software that's **only necessary during the image
 build** doesn't make it to the final image ![](building_construction) <br/>
-Note that the following pattern of Dockerfile instructions does
-NOT help and even makes the overall situation worse:
+Note that the following pattern of Dockerfile instructions **does
+not** help and even makes the overall situation worse:
 
 > &#35; assuming alpine here, would be `apt-get install` for Debian ofc <br/>
 > RUN apk add foo bar moar-packages \ <br/>

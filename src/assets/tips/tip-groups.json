@@ -1,26 +1,30 @@
 [
   {
+    "id": "dependency-management",
+    "name": "Dependency management"
+  },
+  {
     "id": "docker",
-    "name": "Docker tips"
+    "name": "Docker"
   },
   {
     "id": "git",
-    "name": "Git tips"
+    "name": "Git"
   },
   {
     "id": "regex",
-    "name": "Regex tips"
+    "name": "Regex"
   },
   {
     "id": "shell",
-    "name": "Shell tips"
+    "name": "Shell"
   },
   {
     "id": "versioning",
-    "name": "Versioning tips"
+    "name": "Versioning"
   },
   {
     "id": "other",
-    "name": "Other tips"
+    "name": "Other"
   }
 ]

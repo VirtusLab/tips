@@ -17,15 +17,14 @@ Use `^(foo|bar)$` instead ![](bangbang)
 
 Most regex engines allow you to specify that the given string **must/must not** be **preceded/followed by** another string... this relatively unknown feature is called _positive/negative lookbehind/lookahead_ (collectively: *lookarounds*) ![a](hmm)
 * `(?<=foo|bar)qux` will only capture `qux` occurrences preceded by `foo` or `bar` (positive lookbehind) ![](arrow_left) ![a](thumbsup_all)
-* `(?<!foo|bar)qux` will only capture `qux` occurrences NOT preceded by `foo` or `bar` (negative lookbehind) ![](arrow_left) ![](thumbsdown)
+* `(?<!foo|bar)qux` will only capture `qux` occurrences **not** preceded by `foo` or `bar` (negative lookbehind) ![](arrow_left) ![](thumbsdown)
 * `qux(?=foo|bar)` will only capture `qux` occurrences followed by `foo` or `bar` (positive lookahead) ![](arrow_right) ![a](thumbsup_all)
-* `qux(?!foo|bar)` will only capture `qux` occurrences NOT followed by `foo` or `bar` (negative lookahead) ![](arrow_right) ![](thumbsdown)
+* `qux(?!foo|bar)` will only capture `qux` occurrences **not** followed by `foo` or `bar` (negative lookahead) ![](arrow_right) ![](thumbsdown)
 
 This is supported by default by Java/Kotlin/Scala, Python, JS (lookahead only); in `git grep`/GNU `grep`, you need to pass `turbo mode` aka `-P`/`--perl-regexp` flag ![](camel)
 
 In `grep`, this is esp. useful in combination with `-o` (aka `--only-matching`, prints only the part matching the regex, not the whole matched line):
 
 > grep -Po "(?<=version = ')[0-9]+\.[0-9]+\.[0-9]+"
-
 
 On `version = '1.2.3'` input, it'll simply print the matched part (`1.2.3`); lookarounds only tell about the context but aren't part of the matched string itself ![](hacker)

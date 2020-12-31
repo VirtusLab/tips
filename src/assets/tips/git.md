@@ -46,7 +46,7 @@ another place, use the most general form of `git rebase` ![](scissors):
 > git rebase --onto <A=new-base> <B=commits-until> <C=branch-to-rebase>
 
 This means take the _commits from branch C (inclusive) back until
-commit B (exclusive) and reapply it onto  the commit A_ ![](krakow) <br/>
+commit B (exclusive) and reapply it onto  the commit A_ ![](machete) <br/>
 Assuming you're on a branch `feature/foo` that has 3 commits
 and that's built upon branch `feature/base`, a typical
 invocation will look like:
@@ -55,7 +55,7 @@ invocation will look like:
 
 Note that the common form `git rebase feature/base`
 is just a special case of the `--onto A B C`
-invocation that assumes certain (often incorrect)
+invocation that assumes certain (often unintended)
 default values ![](fuggg)
 
 Also, it's almost always a good idea to also
@@ -66,7 +66,7 @@ the rebase if the range of commits turns out
 incorrect ![a](worg-brom-gome)
 
 
-## Commits storage mechanism
+## Commit storage
 ### 7 May 2020
 
 Contrary to the popular belief, git does not store
@@ -80,19 +80,19 @@ approached naively... but git optimizes the storage
 by identifying the files (_blobs_ in gitspeak) and
 directories (_trees_ in gitspeak) by SHA-1 hash of
 their contents, thus never storing two copies of
-an identical file/directory ![](fashtag)
+an identical file/directory ![](hash)
 
 See `git cat-file -p HEAD` for the internal representation
 of the current commit; `tree <hash>` points to the
 directory snapshot recorded in `HEAD`. <br/>
 `git cat-file -p HEAD^{tree}`, in turn, shows the
 representation of this directory snapshot, which
-keeps pointers to snapshots of its subdirectories etc ![a](nyan-cat)
+keeps pointers to snapshots of its subdirectories etc. ![a](nyan-cat)
 
 This approach is excellent for source code since it's
 typically consisted of small files; storage of large
 files that are often changed and/or removed over the
-course of git history is in turn inefficient (hence
+course of git history is, in turn, inefficient (hence
 the need for e.g. [Git LFS](https://git-lfs.github.com/)) ![a](github-parrot)
 
 

@@ -3,7 +3,7 @@
 
 Avoid date/time representations that correspond to
 a **local date/time**. Examples include Java's `LocalDateTime`
-and SQL's `TIMESTAMP` aka `TIMESTAMP WITHOUT TIME ZONE` ![](nie)
+and SQL's `TIMESTAMP` aka `TIMESTAMP WITHOUT TIME ZONE` ![](stop-sign)
 
 The problem is that they give an **impression of pointing
 to a specific point in time** while in fact, they don't ![](bangbang)
@@ -43,7 +43,7 @@ of content similarities between files ![](microsoft)
 files**. Extracting a single file is generally impossible
 without decompressing the entire archive;
 overall compression is better because tar.gz takes
-advantage of content similarities between files ![](biedux)
+advantage of content similarities between files ![](linux)
 
 This trade-off starts to be meaningful for large
 archives with many files inside; unless you need
@@ -73,28 +73,3 @@ are typically less important) are skipped
 unless `-v` option is provided; only main
 class names (`-l` for FQCN) and invocation
 params (`-m`) are listed ![a](shell-party)
-
-
-## Dependency (Hell) Management
-### 22 May 2020
-
-Modern dep management systems can be (roughly, many shades in-between exist)
-divided into 2 major groups based on the answer to the question: <br/>
-**Should deps of package X be provided to/shipped with package X in the
-exact versions required by X**? ![](package) <br/>
-This is in fact pretty similar to: **can any package Y live in the runtime env
-in 2+ different versions**? ![a](twins-parrot)
-
-Common OS package managers (`apt`, `yum`/`dnf`) and dep resolution tools for
-programming langs (Maven, Gradle, sbt; pip) generally answer **NO** to both questions ![](nie) <br/>
-The resulting platform (OS, JVM etc.) has exactly one version of each dep. <br/>
-This enables easy updates (esp. in case of bugs/security problems): each dep needs
-to be updated in just one place (`*`), but at the cost of possibly not being able
-to find a combination of (dep, version) pairs so that each dep's compatibility
-constraints are satisfied (`**`), hence the hell ![](exploding_head)
-
-Snap(py) package manager for Linuxes; Docker; OSGi for JVM generally answer
-**YES** to both questions ![](spurdo-thumbs-up) <br/>
-Each snap/Docker image/OSGi bundle has all its transitive deps baked in;
-(`**`) is pretty much non-existent, but each dep needs to be separately
-updated in every place it's referenced (as opposed to `*`) ![](docker)

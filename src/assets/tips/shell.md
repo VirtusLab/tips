@@ -5,12 +5,12 @@ Very often there's a need to compare the outputs of two shell commands ![](scale
 Of course one might simply save each output separately into a file and `diff` the files...
 but in bash/zsh there's an easier way called _process substitution_:
 
-`diff -u <(./command1 --option args) <(./command2 --option args)`
+> diff -u <(./command1 --option args) <(./command2 --option args)
 
 If you run `set -x` (shell debug mode on) beforehand, you'll see how the actual params passed
 to the `diff` executable look like ![](sleuth_or_spy)
 
-`diff -u /dev/fd/63 /dev/fd/62`
+> diff -u /dev/fd/63 /dev/fd/62
 
 The shell created two _[named pipes](https://en.wikipedia.org/wiki/Named_pipe)_, and `diff` simply
 treats them as files to compare ![](pipe)
@@ -27,7 +27,7 @@ Also, check [colordiff](https://www.colordiff.org/) for green/red output ![](art
 For production/CI-related shell (sh/bash) scripts, you pretty much always want to use
 so-called _strict mode_ ![](grammar-nazi)
 
-`set -e -o pipefail -u`
+> set -e -o pipefail -u
 
 By default, nothing special happens after a command in a script ends up with
 **a non-zero exit status** ![](shrug)<br/>
@@ -46,12 +46,11 @@ causes the script to immediately exit with an error (rather than resolve `$foo` 
 Tip: `${foo-}` will simulate the default behavior in the `set -u` mode.
 
 
-## In/Out redirections
+## Input/output redirections
 ### 19 May 20202
 
 To pass a string verbatim as stdin to
-a shell (bash/zsh) command, use `<<<`: `./my-command <<< "Hello world"`
-
+a shell (bash/zsh) command, use `<<<`: `./my-command <<< "Hello world"` <br/>
 Note that this will include a trailing
 newline, which might sometimes be
 undesired (e.g. in the input to `base64`) ![a](shell-party)
