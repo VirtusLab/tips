@@ -117,5 +117,3 @@ To make sure `git fetch` also removes your local
 already removed in the remote, pass `-p`/`--prune` flag: <br/>
 
 > git fetch -p
-
-![a](rhytmical-parrot)

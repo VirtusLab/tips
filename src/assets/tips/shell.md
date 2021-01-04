@@ -67,5 +67,3 @@ into a shell string, use `$'....'`-style
 strings instead of regular `'...'` or `"..."`: <br/>
 
 > ./my-command "this is " $'my string \t\n'
- 
-![](money_mouth_face)
