@@ -47,7 +47,7 @@ Tip: `${foo-}` will simulate the default behavior in the `set -u` mode.
 
 
 ## Input/output redirections
-### 19 May 20202
+### 19 May 2020
 
 To pass a string verbatim as stdin to
 a shell (bash/zsh) command, use `<<<`: `./my-command <<< "Hello world"` <br/>
@@ -67,3 +67,42 @@ into a shell string, use `$'....'`-style
 strings instead of regular `'...'` or `"..."`: <br/>
 
 > ./my-command "this is " $'my string \t\n'
+
+
+## Multiplatform sed
+### 12 Jun 2020
+
+To replace a regex pattern in a file **in place**,
+use `sed -i.bak 's/<regex-from>/<string-to>/' <file>` ![a](regex-party)
+
+`sed -i` is notorious for non-portability between
+Linux/Docker containers and OS X ![](apple-logo) <br/>
+Neither of `sed -i <expr> <file>` or `sed -i '' <expr> <file>`
+will work on both systems ![](fuggg) <br/>
+To guarantee portability between GNU (Linux) and BSD (OS X) sed,
+you should use the `-i<suffix>`, e.g. `-i.bak` as above ![](gnu) <br/>
+This will also save the original `<file>` under `<file><suffix>` (unlike `-i` or `-i ''`),
+while still modifying `<file>` in place (just like `-i` or `-i ''`) ![](spurdo-thumbs-up)
+
+In a common scenario, however, where the aim is to substitute `$FOO`, `${BAR}` etc. occurrences
+in a file with the values of `FOO`, `BAR` etc. env vars, using `sed` might be an overkill ![](cannon) <br/>
+A better suited (and less error-prone) tool for this specific job is called `envsubst`.
+Most Linux distros have it available out of the box; OS X and some Docker containers
+require installing `gettext` package first ![](macbook)
+
+
+## Shell brace extension
+### 26 Jun 2020
+
+Instead of typing file path twice in commands like `mv` or `cp` (e.g. `mv my/file/with/a/very/long/name.xd my/file/with/a/very/long/name.xd.bak`)
+you can use shell brace expansion: `mv my/file/with/a/very/long/name.xd{,.bak}` ![](professor-spurdo)
+
+To make sure `mv` and `cp` don't overwrite existing destinations with no warning,
+replace them with an alias that adds `-i`/`--interactive` option: `alias cp='cp -i'`.
+Same point applies to `rm`: `-i` makes `rm` ask about whether to delete a file
+(unless `-f` is provided) ![](fuggg)
+
+As a last-resort protection against catastrophic file removal in `-rf` mode,
+it's also worth passing `-v`/`--verbose` option to `rm` so that the files are listed
+while getting removed; this way a removal can be Ctrl+C-interrupted midway
+if it goes wrong (e.g. in case of a superfluous space like in `rm -rfv ~ /.local/bin`) ![a](pepepanic)

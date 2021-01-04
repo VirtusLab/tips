@@ -26,3 +26,37 @@ they're installed** ![](general-spurdo)
 > RUN apk add foo bar moar-packages \ <br/>
 > &nbsp;&nbsp;&nbsp;&nbsp; && do-some-stuff-using-installed packages ... \ <br/>
 > &nbsp;&nbsp;&nbsp;&nbsp; && apk del foo bar moar-packages <br/>
+
+
+## Docker prune
+### 1 Jul 2020
+
+Run `docker images` and `docker ps -a` on your machine.
+There's a good chance that there's quite a few images and/or containers
+that are no longer used at this point... and that they consume a significant amount of disk space ![](ups)
+
+To clean up images that are neither tagged nor used by any container, use `docker image prune`.
+To additionally remove all stopped containers before pruning the images, use `docker system prune` ![](spurdo-thumbs-up)
+
+Along these lines: how many times have you actually needed to `docker restart` a stopped container?
+Most of the time, the container can be discarded right after `docker run` is completed.
+To ensure automatic removal after completion, use `--rm` flag: `docker run --rm <image> [<command>]` ![](wastebasket)
+
+
+## Multi-stage builds
+### 15 Jul 2020
+
+If you need a certain piece of software (like `git`) only during the image build
+but not in the resulting image, you can use the **multi-stage builds** in your Dockerfile:
+
+> FROM alpine/git:latest as cloned-repo <br/>
+> RUN git clone --depth=1 https://github.com/VirtusLab/my-awesome-repo.git /repo <br/>
+> &#35;&#35;&#35; Everything from the first stage will be discarded unless explicitly `COPY`-ed in a subsequent stage <br/>
+> FROM ubuntu:latest <br/>
+> COPY --from=cloned-repo /repo /repo <br/>
+> WORKDIR /repo <br/>
+> RUN <build command for my-awesome-repo> <br/>
+> .... <br/>
+
+`alpine/git` provides a lightweight image (<30MB) with basically just git inside ![](snow_capped_mountain) <br/>
+Note that usually just the latest commit (`--depth=1`) is really needed when cloning ![a](meld-parrot)

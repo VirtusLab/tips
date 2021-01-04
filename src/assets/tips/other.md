@@ -73,3 +73,39 @@ are typically less important) are skipped
 unless `-v` option is provided; only main
 class names (`-l` for FQCN) and invocation
 params (`-m`) are listed ![a](shell-party)
+
+
+## Dummy Linux display
+### 1 Jun 2020
+
+To run **any** desktop-GUI application in a Linux environment that lacks
+physical screen (including Docker containers & most CI contexts),
+use _X Virtual Framebuffer_ ![](nerd_face)
+
+> xvfb-run -a &lt;my-command-to-run&gt;
+
+This will substitute the typical display/X server (`Xorg`) with a dummy,
+in-memory display server, `Xvfb` ![](linux)
+
+Note that this is distinct from running Chrome with `--headless`
+or JVM with `-Djava.awt.headless`; this uses the explicit support
+for a headless mode implemented in Chrome 59+/AWT,
+while `xvfb-run` just attaches a different display server to the process
+(and hence the process doesn't even need to know that it's being run headlessly,
+let alone provide any explicit support for a headless mode) ![](executioner)
+
+
+## YAML vs JSON
+### 17 Jul 2020
+
+It's a relatively unknown fact that YAML is designed as a **strict superset** of JSON... so every valid JSON is also a valid YAML ![a](cooo) <br/>
+Just try pasting any JSON as an input to a YAML->JSON (not the other way round!)
+converter like http://onlineyamltools.com/convert-yaml-to-json ![](wrench) <br/>
+In particular, the below is a valid YAML
+(although not a valid JSON, since quotation around multi-word strings is missing):
+
+> { <br/>
+> &nbsp;&nbsp; hello world: foo bar, <br/>
+> &nbsp;&nbsp; lorem ipsum: [dolor, sit, amet] <br/>
+> } <br/>
+

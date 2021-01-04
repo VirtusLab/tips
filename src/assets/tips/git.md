@@ -117,3 +117,36 @@ To make sure `git fetch` also removes your local
 already removed in the remote, pass `-p`/`--prune` flag: <br/>
 
 > git fetch -p
+
+
+## Git reflog
+### 4 Jun 2020
+
+Even advanced git users sometimes face the following scenario `(*)`: <br/>
+_I commited changes that used [INSERT CLASS/METHOD/TRICK etc.], then I did
+[INSERT GIT ACTIONS] and I can no longer find those changes_ ![a](revert-it-parrot)
+
+Git is actually explicitly designed to counteract problems like that;
+it guarantees that **anything that's been committed can be retrieved**
+unless the repo's been corrupted or GCed in the meantime
+(there's a reasonably long GC expiry time even for unreachable commits, though) ![](relieved)
+
+To see the history of how the "current branch" aka `HEAD` pointer has been moving in the past,
+view `git reflog` aka the record of all operations that involve moving the `HEAD`
+like checkout, commit, merge, pull, rebase, reset, revert etc. ![](scroll)
+
+Now to deal with the `(*)` problem, add `-p`/`--patch` (`git reflog -p`, also works for `git log`)
+to see the changes introduced **by every commit that's ever been HEAD in the repo**,
+and `/`-search for `[CLASS/METHOD/TRICK]` in the pager, or pipe the output to `grep` ![](sleuth_or_spy)
+
+
+## Fast-forward only pull
+### 27 Jul 2020
+
+Next time you run `git pull`, add `--ff-only` flag (or enhance your favorite `gl`/`gpl`/... alias) ![](pull-request) <br/>
+This will ensure that your local branch will only be modified if the pull can be performed
+in a **fast-forward** manner (i.e. if the commit of the remote branch
+is a descendant of your local branch) ![](bika-bika) <br/>
+If a pull fails, you can then decide yourself how to deal with the remote branch
+that diverged from the local branch; most likely you want to simply reset
+(`git reset --keep @{upstream}`) the local branch to whatever commit the remote branch points to ![](point_left)

@@ -20,6 +20,10 @@
     "name": "Shell"
   },
   {
+    "id": "testing",
+    "name": "Testing"
+  },
+  {
     "id": "versioning",
     "name": "Versioning"
   },
