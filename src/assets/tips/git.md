@@ -115,4 +115,7 @@ gone from the remote repository
 To make sure `git fetch` also removes your local
 `origin/...` branches corresponding to the branches
 already removed in the remote, pass `-p`/`--prune` flag: <br/>
-`git fetch -p` ![a](rhytmical-parrot)
+
+> git fetch -p
+
+![a](rhytmical-parrot)

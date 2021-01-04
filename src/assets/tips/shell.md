@@ -65,4 +65,7 @@ use `$(</dev/stdin)` to read the entire stdin ![a](pacman)
 To put verbatim tab/newline etc. characters
 into a shell string, use `$'....'`-style
 strings instead of regular `'...'` or `"..."`: <br/>
-`./my-command "this is " $'my string \t\n'` ![](money_mouth_face)
+
+> ./my-command "this is " $'my string \t\n'
+ 
+![](money_mouth_face)
