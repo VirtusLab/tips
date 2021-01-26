@@ -33,7 +33,7 @@ they're installed** ![](general-spurdo)
 
 Run `docker images` and `docker ps -a` on your machine.
 There's a good chance that there's quite a few images and/or containers
-that are no longer used at this point... and that they consume a significant amount of disk space ![](ups)
+that are no longer used at this point... and that they consume a significant amount of disk space ![a](this-is-fine)
 
 To clean up images that are neither tagged nor used by any container, use `docker image prune`.
 To additionally remove all stopped containers before pruning the images, use `docker system prune` ![](spurdo-thumbs-up)

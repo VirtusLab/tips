@@ -76,7 +76,7 @@ To replace a regex pattern in a file **in place**,
 use `sed -i.bak 's/<regex-from>/<string-to>/' <file>` ![a](regex-party)
 
 `sed -i` is notorious for non-portability between
-Linux/Docker containers and OS X ![](apple-logo) <br/>
+Linux/Docker containers and OS X ![](apple) <br/>
 Neither of `sed -i <expr> <file>` or `sed -i '' <expr> <file>`
 will work on both systems ![](fuggg) <br/>
 To guarantee portability between GNU (Linux) and BSD (OS X) sed,

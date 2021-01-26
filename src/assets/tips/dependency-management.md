@@ -1,4 +1,4 @@
-## Dependency (Hell) Management
+## The great divide
 ### 22 May 2020
 
 Modern dependency management systems can be (roughly, many shades in-between exist)
