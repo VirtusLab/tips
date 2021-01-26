@@ -37,7 +37,7 @@ an important conceptual difference ![](goncern)
 files**. Extracting a single file (`unzip <archive>
 <path/to/file>`) is quick; overall compression
 is weaker because zip doesn't take advantage
-of content similarities between files ![](microsoft)
+of content similarities between files ![](windows)
 
 **tar.gz** is a **compressed archive** of **uncompressed
 files**. Extracting a single file is generally impossible

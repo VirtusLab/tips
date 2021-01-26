@@ -1,0 +1,25 @@
+name: CI checks
+on: push
+
+jobs:
+  remark:
+    name: Check markdown files with remark
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: sudo npm install --global remark-cli remark-lint-no-dead-urls
+      - name: Run remark
+        run: remark --frail .
+
+  emoji-check:
+    name: Check emoji in markdown files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install necessary modules
+        run: pip3 install dataclasses
+      - name: Run check
+        run: python3 ci_checks/forbidden_emoji/check.py
