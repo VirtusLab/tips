@@ -22,4 +22,4 @@ jobs:
       - name: Install necessary modules
         run: pip3 install dataclasses
       - name: Run check
-        run: python3 ci_checks/forbidden_emoji/check.py
+        run: python3 ci_checks/emoji/check.py

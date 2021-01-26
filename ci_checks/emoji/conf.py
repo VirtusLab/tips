@@ -1,6 +1,7 @@
 from models import *
 
 MD_FILES_PATH = 'src/assets/tips'
+EMOJI_FILES_PATH = 'src/assets/emoji'
 
 FORBIDDEN_EMOJI = [
     PoliticallyForbiddenEmoji('biedux', emoji_instead='linux'),
