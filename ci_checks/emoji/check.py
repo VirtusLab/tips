@@ -8,13 +8,13 @@ import re
 from conf import MD_FILES_PATH, EMOJI_FILES_PATH, FORBIDDEN_EMOJI
 
 
-map_of_forbidden_emoji = {emoji.emoji_name: emoji for emoji in FORBIDDEN_EMOJI}
+forbidden_emoji_by_name = {emoji.emoji_name: emoji for emoji in FORBIDDEN_EMOJI}
 
 emoji_regex = re.compile(r'!\[(a?)\]\((.*?)\)')
 
 is_error = False
 
-emoji_filename_list = []
+used_emoji_filenames = []
 
 for filename in glob(f'{MD_FILES_PATH}/*.md'):
     with open(filename, mode='r') as file:
@@ -23,13 +23,13 @@ for filename in glob(f'{MD_FILES_PATH}/*.md'):
             is_animated = match.group(1) == 'a'
             emoji_name = match.group(2)
 
-            # Add emoji to an emoji_filename_list
+            # Add emoji to an used_emoji_filenames
             expected_emoji_filename = f'{emoji_name}.{"gif" if is_animated else "png"}'
-            emoji_filename_list.append(expected_emoji_filename)
+            used_emoji_filenames.append(expected_emoji_filename)
 
             # Check if emoji is forbidden
-            if emoji_name in map_of_forbidden_emoji:
-                print(map_of_forbidden_emoji[emoji_name].forbidden_message(filename))
+            if emoji_name in forbidden_emoji_by_name:
+                print(forbidden_emoji_by_name[emoji_name].forbidden_message(filename))
                 is_error = True
 
             # Check if emoji has a corresponding image file
@@ -41,7 +41,7 @@ for filename in glob(f'{MD_FILES_PATH}/*.md'):
 
 # Check if there are orphaned emoji files
 for file in listdir(EMOJI_FILES_PATH):
-    if file not in emoji_filename_list:
+    if file not in used_emoji_filenames:
         print(f'Emoji file {file} is not used in any tip markdown file')
         is_error = True
 
