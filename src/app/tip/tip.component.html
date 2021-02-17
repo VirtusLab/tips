@@ -1,6 +1,13 @@
 <div class="tip">
   <div class="tip-content">
-    <h3>{{tipName}}</h3>
+    <h3
+      id="{{tipPermalinkName()}}"
+      (mouseenter)="showPermalinkElement(true)"
+      (mouseleave)="showPermalinkElement(false)"
+    >
+      {{tipName}}
+      <a class="permalink" href="#{{tipPermalinkName()}}" *ngIf="permalinkVisible" >#</a>
+    </h3>
     <markdown [data]="tipContent"></markdown>
   </div>
   <div class="date">{{formatDate(tipDate)}}</div>

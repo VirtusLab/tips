@@ -1,10 +1,18 @@
-<section class="tips-section" id="{{tipsId}}-tips">
+<section class="tips-section" id="{{tipGroupId}}-tips">
   <div class="tips-content">
-    <h2>{{tipsName}}</h2>
+    <h2
+      id="{{tipPermalinkName()}}"
+      (mouseenter)="showPermalinkElement(true)"
+      (mouseleave)="showPermalinkElement(false)"
+    >
+      {{tipGroupName}}
+      <a class="permalink" href="#{{tipPermalinkName()}}" *ngIf="permalinkVisible" >#</a>
+    </h2>
     <app-tip *ngFor="let tip of tips | async"
              tipName="{{tip.name}}"
              tipDate="{{tip.date}}"
              tipContent="{{tip.content}}"
+             tipGroupId="{{tipGroupId}}"
     ></app-tip>
   </div>
 </section>

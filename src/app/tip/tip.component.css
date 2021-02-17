@@ -3,6 +3,10 @@
   color: #19a049!important
 }
 
+.permalink {
+  margin-left: 10px;
+}
+
 ::ng-deep code,
 ::ng-deep blockquote {
   quotes: none;

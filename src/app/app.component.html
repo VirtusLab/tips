@@ -4,6 +4,6 @@
 <app-about></app-about>
 
 <app-tip-group *ngFor="let tipGroup of tipGroups | async"
-               tipsId="{{tipGroup.id}}"
-               tipsName="{{tipGroup.name}}"
+               tipGroupId="{{tipGroup.id}}"
+               tipGroupName="{{tipGroup.name}}"
 ></app-tip-group>
