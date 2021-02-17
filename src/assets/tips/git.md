@@ -1,5 +1,5 @@
 ## Force push and hard reset
-### 25 March 2020
+### 25 Mar 2020
 
 **Do not** use `git push --force`. Use `git push --force-with-lease` ![](muscle) <br/>
 This will prevent you from accidentally overwriting the history pushed to the same branch by someone else in the meantime.
@@ -12,7 +12,7 @@ from Paweł Lipski's `Painless Linear History in Git` presentation
 
 
 ## Previous branch shortcut
-### 27 March 2020
+### 27 Mar 2020
 
 Use `git checkout -` or `git switch -` to check out the **previously checked-out branch** ![](leftwards_arrow_with_hook) <br/>
 The same also works with `git merge -`, `git rebase -` and `git cherry-pick -` ![](cherries) ![](pick)
@@ -46,7 +46,7 @@ another place, use the most general form of `git rebase` ![](scissors):
 > git rebase --onto <A=new-base> <B=commits-until> <C=branch-to-rebase>
 
 This means take the _commits from branch C (inclusive) back until
-commit B (exclusive) and reapply it onto  the commit A_ ![](machete) <br/>
+commit B (exclusive) and reapply it onto the commit A_ ![](machete) <br/>
 Assuming you're on a branch `feature/foo` that has 3 commits
 and that's built upon branch `feature/base`, a typical
 invocation will look like:
@@ -150,3 +150,26 @@ is a descendant of your local branch) ![](bika-bika) <br/>
 If a pull fails, you can then decide yourself how to deal with the remote branch
 that diverged from the local branch; most likely you want to simply reset
 (`git reset --keep @{upstream}`) the local branch to whatever commit the remote branch points to ![](point_left)
+
+
+## Commiter vs author
+### 12 Jan 2021
+
+Contrary to the popular belief, each commit doesn't contain just one set of
+**name+email+date**, but **two** of them ![](gemini)
+
+**Author & author date** are set when the commit is first created using `git commit`. <br/>
+These values remain unchanged when the commit is "modified"
+(or actually, a new commit is made based on the original one) via amend,
+cherry-pick, rebase etc. ![](cherries)![](pick)
+
+**Committer & commit date** are set to the same values as author/author date
+when the commit is first created, <br/>
+but every time the commit is "modified", they are updated to reflect the current user
+(which might differ from the original author) and timestamp ![](writing_hand)
+
+`git log` only displays author&author date by default; use `git log --pretty=fuller`
+to include committer&commit date as well ![](jon-pretty) <br/>
+If author differs from committer, GitHub indicates that by `X authored and Y committed...`
+in the commit listing; actually, GitHub also takes **pusher** into account...
+which can be different from both author and committer ![](github)

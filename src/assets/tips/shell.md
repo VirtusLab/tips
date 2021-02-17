@@ -106,3 +106,36 @@ As a last-resort protection against catastrophic file removal in `-rf` mode,
 it's also worth passing `-v`/`--verbose` option to `rm` so that the files are listed
 while getting removed; this way a removal can be Ctrl+C-interrupted midway
 if it goes wrong (e.g. in case of a superfluous space like in `rm -rfv ~ /.local/bin`) ![a](pepepanic)
+
+
+## Environment var passing
+### 20 Nov 2020
+
+To pass an environment variable just to a single process without explicitly exporting it
+(to avoid making it available to all other subsequent commands), instead of export
+`FOO=bar QUX=baz` and `./my-command ...`, use the `FOO=bar QUX=baz ./my-command ...` syntax ![](equals)
+
+On the other end of the spectrum, to automatically export all shell variables
+that are ever created or modified, use `set -a` (aka `set -o allexport`) option. <br/>
+This should be used carefully, however... also due to the security reasons ![](goncern)
+
+
+## Command on file in place
+### 21 Dec 2020
+
+If a command does not support operating on a file **in place** (like e.g. `sed -i ...` file would do),
+do not try to redirect both input and output to the very same file (`./my-command < file1 > file1`)
+since this will instantly wipe the file before it can be read ![](stop-sign) <br/>
+You could use a temporary file, of course... but this requires an extra `mv` or `rm`
+and is pretty unwieldy ![](poorly-renovated-spurdo)
+
+Instead, consider a tool named `sponge` available in [moreutils](https://joeyh.name/code/moreutils/)
+package (Linuxes/Mac OS) which reads its entire input before writing or appending (-a)
+it to the specified file ![](spongebob) <br/>
+This allows for a construct like `./my-command file1 | sponge file1` ![](pipe)
+
+Fun fact: moreutils also provide a tool called `pee`, which allows for
+**redirecting output from a process to multiple processes at once**: <br/>
+`./my-command | pee "./other-command1 param" ./other-command2` ![](a-o-czym-mowa) <br/>
+Note: in bash/zsh, this can also be achieved with `tee` and process substitution:
+`./my-command | tee >(./other-command1 param) >(./other-command2) >/dev/null` ![](tea)

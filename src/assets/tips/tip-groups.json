@@ -8,16 +8,32 @@
     "name": "Docker"
   },
   {
+    "id": "english",
+    "name": "English"
+  },
+  {
     "id": "git",
     "name": "Git"
+  },
+  {
+    "id": "kubernetes",
+    "name": "Kubernetes"
   },
   {
     "id": "regex",
     "name": "Regex"
   },
   {
+    "id": "scala",
+    "name": "Scala"
+  },
+  {
     "id": "shell",
     "name": "Shell"
+  },
+  {
+    "id": "slack",
+    "name": "Slack"
   },
   {
     "id": "testing",

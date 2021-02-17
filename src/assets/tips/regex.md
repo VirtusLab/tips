@@ -1,5 +1,5 @@
 ## Operators precedence
-### 30 March 2020
+### 30 Mar 2020
 
 `^foo|bar$` won't just match strings `foo` and `bar`, but also e.g. `foo_123` and `rabarbar` ![](fuggg)
 
@@ -13,7 +13,7 @@ Use `^(foo|bar)$` instead ![](bangbang)
 
 
 ## Lookbehind/lookahead
-### 8 April 2020
+### 8 Apr 2020
 
 Most regex engines allow you to specify that the given string **must/must not** be **preceded/followed by** another string... this relatively unknown feature is called _positive/negative lookbehind/lookahead_ (collectively: *lookarounds*) ![a](hmm)
 * `(?<=foo|bar)qux` will only capture `qux` occurrences preceded by `foo` or `bar` (positive lookbehind) ![](arrow_left) ![a](thumbsup_all)

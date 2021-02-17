@@ -33,7 +33,7 @@ they're installed** ![](general-spurdo)
 
 Run `docker images` and `docker ps -a` on your machine.
 There's a good chance that there's quite a few images and/or containers
-that are no longer used at this point... and that they consume a significant amount of disk space ![a](this-is-fine)
+that are no longer used at this point... and that they consume a significant amount of disk space ![a](this_is_fine)
 
 To clean up images that are neither tagged nor used by any container, use `docker image prune`.
 To additionally remove all stopped containers before pruning the images, use `docker system prune` ![](spurdo-thumbs-up)
@@ -60,3 +60,30 @@ but not in the resulting image, you can use the **multi-stage builds** in your D
 
 `alpine/git` provides a lightweight image (<30MB) with basically just git inside ![](snow_capped_mountain) <br/>
 Note that usually just the latest commit (`--depth=1`) is really needed when cloning ![a](meld-parrot)
+
+
+## Keeping secrets secure
+### 18 Jan 2021
+
+Beware of leaving credentials/access tokens etc. in a Docker image after the build &mdash;
+they can easily fall into unauthorized hands ![a](pepepanic)
+
+If any secret needs to be available during the image build (e.g. to download private packages),
+**do not** `COPY` it into the image, even if it's later `rm`ed ![](stop-sign) <br/>
+It will still remain in the image layer generated for the `COPY` instruction ![](copy)
+
+Also, **do not** pass the secret's content via `ARG foo`/`docker build --build-arg foo=...`,
+even if it isn't going to be recorded in any layer's filesystem ![](secret) <br/>
+It can still be retrieved from layer metadata, see `docker history --no-trunc ...` → `CREATED BY` ![](goncern)
+
+As of 2021, one of the best solutions (leaving no trace in any layer's filesystem or metadata)
+is `RUN --mount`, here shown for `.npmrc` file:
+
+> &#35; syntax=docker/dockerfile:experimental <br/>
+> FROM node:.... <br/>
+> .... <br/>
+> RUN --mount=type=secret,id=npmrc,dst=$HOME/.npmrc   npm install <br/>
+> ... <br/>
+
+With this `Dockerfile`, to build the image with your local `.npmrc` file mounted just to the RUN step, <br/>
+run  `DOCKER_BUILDKIT=1 docker build --secret id=npmrc,src=$HOME/.npmrc .` ![](bodybuilder)
