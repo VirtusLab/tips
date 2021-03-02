@@ -12,9 +12,32 @@ Consider the following example:
 > } <br/>
 
 `qux`, despite being lazy, will be evaluated quicker than it would if it wasn't lazy ![](sloth) <br/>
-In general (although not in this example), lazy vals are tricky enough to cause a `NullPointerException`
-- e.g. when their evaluation indirectly leads to referencing a not-yet-initialized `val` ![a](this_is_fine) <br/>
+In general (although not in this example), lazy vals are tricky enough to cause a `NullPointerException` &mdash;
+e.g. when their evaluation indirectly leads to referencing a not-yet-initialized `val` ![a](this_is_fine) <br/>
 Using them for purposes other than simple caching is questionable (unless you really understand how the directed acyclic graph of initializations of vals/lazy vals in the given class looks like) ![](goncern)
+
+
+## Safe initialization
+### 11 Dec 2020
+
+In Java/Scala, avoid **calling instance methods from constructors**.
+This heavily increases the risk of a `NullPointerException`,
+since some final fields (Java)/vals (Scala) might still be **UN**initialized yet,
+while the methods might implicitly rely on them already being initialized ![a](this_is_fine)
+
+Note that even if all fields/vals of the given class `X` are already initialized
+when calling method `foo` from `X`'s constructor... it still isn't enough ![](poorly-renovated-spurdo) <br/>
+**If class `X` isn't final**, then the invocation of `X` c'tor might still be followed
+by an invocation of **subclass** (say, `Y`) **c'tor**. <br/>
+If method `foo` is overridden in `Y`, and `Y#foo` **accesses some fields/vals
+defined in `Y`** (rather than in `X`), then an access to an uninitialized field
+can still happen ![](sad_pepe)
+
+Fun fact: a complete (zero-NPE) compile-time solution of this problem for Java
+is provided by [Nullness Checker](https://checkerframework.org/manual/#nullness-checker),
+at the expense of adding a significant (mental) overhead to the type system.
+You'll be especially surprised how non-intuitive it is to
+[null-safely initialize cyclic structures](https://checkerframework.org/manual/#circular-initialization) ![](hushed)
 
 
 ## Futures
@@ -35,4 +58,4 @@ and spurious failures in tests (or even in production env) ![a](async-parrot)
 To systematically prevent it from ever happening, add both `-Ywarn-value-discard`
 (expressions returning non-Unit value cannot be used as statements) and
 `-Xfatal-warnings` (each warning is an error) to `scalacOptions`;
-you might want to turn it off for Test scope, though ![](gear)
+you might want to turn it off for `Test` scope, though ![](gear)

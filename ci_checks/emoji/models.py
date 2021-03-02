@@ -34,3 +34,10 @@ class RenamedEmoji(ForbiddenEmoji):
         super(RenamedEmoji, self).__init__(emoji_name=emoji_name, reason="for this site purpose has been renamed (and "
                                                                          "not allowed to be used with original name)",
                                            emoji_instead=emoji_instead)
+
+
+@dataclass(init=False)
+class BarelyReadableEmoji(ForbiddenEmoji):
+    def __init__(self, emoji_name: str, emoji_instead: Optional[str] = None):
+        super(BarelyReadableEmoji, self).__init__(emoji_name=emoji_name, reason="it's barely readable",
+                                                  emoji_instead=emoji_instead)

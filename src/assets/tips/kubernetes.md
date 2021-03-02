@@ -10,7 +10,7 @@ This is much lighter & more CI-suitable approach than what `minikube` offers
 (cluster within a dedicated VM); also, typically less troubleshooting is needed ![](sleuth_or_spy)
 
 
-## Switching context with easy
+## Switching context/namespace with ease
 ### 8 Oct 2020
 
 To easily switch between k8s contexts, use [kubectx](https://github.com/ahmetb/kubectx) ![](github)
@@ -22,7 +22,7 @@ Kind/minikube and a remote development cluster ![](arrows_counterclockwise)
 `kubens` is a similar tool but for moving between Kubernetes namespaces ![](space_invader)
 
 
-## Own Kubernetes command
+## Custom Kubernetes commands
 ### 26 Oct 2020
 
 Just as with git subcommands, if `kubectl-X` executable is available on `PATH`,

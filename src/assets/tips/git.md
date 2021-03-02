@@ -146,13 +146,36 @@ and `/`-search for `[CLASS/METHOD/TRICK]` in the pager, or pipe the output to `g
 Next time you run `git pull`, add `--ff-only` flag (or enhance your favorite `gl`/`gpl`/... alias) ![](pull-request) <br/>
 This will ensure that your local branch will only be modified if the pull can be performed
 in a **fast-forward** manner (i.e. if the commit of the remote branch
-is a descendant of your local branch) ![](bika-bika) <br/>
+is a descendant of your local branch) ![](bika-bika)
+
 If a pull fails, you can then decide yourself how to deal with the remote branch
 that diverged from the local branch; most likely you want to simply reset
 (`git reset --keep @{upstream}`) the local branch to whatever commit the remote branch points to ![](point_left)
 
 
-## Commiter vs author
+## Pull requests good practices
+### 9 Nov 2020
+
+Keep your pull requests small. As a (relatively) old saying goes,
+_10 lines changed = 10 issues on review; 500 lines changed = mmm'kay,
+looks fine to me_ ![](xd-thinking)
+
+Of course trimming PRs down to 10 lines is almost always impossible.
+Nevertheless, keeping their scope limited makes the job easier for reviewers:
+smaller PR means the reviewer needs to keep less context in the "brain cache"
+and is less likely to miss an important change ![](brain)
+
+Especially, **refactors should NOT be mixed** with bugfixes or new features.
+Naming the branches `refactor/...`, `bugfix/...`, `feature/...`, `chore/...` etc.
+helps keep the focus ![a](party-bug)
+
+_But... but... won't small PRs cause that I'll have more git branches
+(sometimes stacked on each other), which will make my local repo unmanagable?_
+Ha! nope, coz you've got [git-machete-intellij-plugin](https://github.com/VirtusLab/git-machete-intellij-plugin#git-machete-intellij-plugin)
+or [git-machete CLI](https://github.com/VirtusLab/git-machete#git-machete) ![a](git-machete-fading)
+
+
+## Committer vs author
 ### 12 Jan 2021
 
 Contrary to the popular belief, each commit doesn't contain just one set of

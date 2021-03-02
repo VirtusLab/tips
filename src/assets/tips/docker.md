@@ -1,4 +1,4 @@
-## Don't blow a docker image
+## Don't bloat a docker image
 ### 12 May 2020
 
 Docker images tend to get bloated (1GB+) very quickly after
@@ -74,7 +74,7 @@ It will still remain in the image layer generated for the `COPY` instruction ![]
 
 Also, **do not** pass the secret's content via `ARG foo`/`docker build --build-arg foo=...`,
 even if it isn't going to be recorded in any layer's filesystem ![](secret) <br/>
-It can still be retrieved from layer metadata, see `docker history --no-trunc ...` → `CREATED BY` ![](goncern)
+It can still be retrieved from layer metadata, see `docker history --no-trunc ...` &#10140; `CREATED BY` ![](goncern)
 
 As of 2021, one of the best solutions (leaving no trace in any layer's filesystem or metadata)
 is `RUN --mount`, here shown for `.npmrc` file:
@@ -85,5 +85,5 @@ is `RUN --mount`, here shown for `.npmrc` file:
 > RUN --mount=type=secret,id=npmrc,dst=$HOME/.npmrc   npm install <br/>
 > ... <br/>
 
-With this `Dockerfile`, to build the image with your local `.npmrc` file mounted just to the RUN step, <br/>
+With this `Dockerfile`, to build the image with your local `.npmrc` file mounted just to the `RUN` step, <br/>
 run  `DOCKER_BUILDKIT=1 docker build --secret id=npmrc,src=$HOME/.npmrc .` ![](bodybuilder)

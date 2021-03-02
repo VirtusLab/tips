@@ -1,3 +1,23 @@
+## Dummy Linux display
+### 1 Jun 2020
+
+To run **any** desktop-GUI application in a Linux environment that lacks
+physical screen (including Docker containers & most CI contexts),
+use _X Virtual Framebuffer_ ![](nerd_face)
+
+> xvfb-run -a &lt;my-command-to-run&gt;
+
+This will substitute the typical display/X server (`Xorg`) with a dummy,
+in-memory display server, `Xvfb` ![](linux)
+
+Note that this is distinct from running Chrome with `--headless`
+or JVM with `-Djava.awt.headless`; these use the explicit support
+for a headless mode implemented in Chrome 59+/AWT,
+while `xvfb-run` just attaches a different display server to the process
+(and hence the process doesn't even need to know that it's being run headlessly,
+let alone provide any explicit support for a headless mode) ![](executioner)
+
+
 ## Static code analyzers
 ### 19 Jun 2020
 

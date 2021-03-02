@@ -42,3 +42,26 @@ call the newly-added endpoint on the older API ![](stackoverflow)<br/>
 Similarly for a major aka **non-backward-compatible**
 change &mdash; it can still **preserve forward compatibility**...
 think of removing an endpoint from the API ![](wastebasket)
+
+
+## Database versioning
+### 1 Oct 2020
+
+Most strategies of app/service deployment require **both the old and new version**
+of the given software to run **simultaneously** for a short window of time during the deployment ![](ship) <br/>
+Since both versions need to use the same database, the problem begins
+when a deployment entails a DB schema migration ![](goncern)
+
+Always ensure that the schema changes are **backwards-compatible** wrt.
+parts of the schema that are still used by the app ![](back) <br/>
+For a relational DB, e.g. removing a column that's used by the old version
+can potentially crash the old instances while the new version is still being deployed ![](azure-on-fire) <br/>
+Even regardless of the window of time around the deployment, in case the new version
+needs to be **rolled back** after the DB is already migrated, the old version must be able
+to cooperate with the new schema ![](arrow_right_hook)
+
+Non-backward-compatible changes should be performed as cleanup migrations,
+only when the affected columns/tables/etc. aren't used by any deployment anymore ![](trashbin)
+
+It's actually a good idea to version the migrations semantically
+(e.g. `V${major}_${minor}_${patch}__${description}.sql` in [Flyway](https://flywaydb.org/)) ![](stonks)

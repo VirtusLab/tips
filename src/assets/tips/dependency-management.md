@@ -42,3 +42,18 @@ any integration on GitHub is required for public repos ![](relieved) <br/>
 This is a very handy approach, esp. if your project needs to depend on the changes
 in a fork of an open-source project that have not been merged&published
 in the upstream yet ![](arrow_up)
+
+
+## Download a single artifact into the Ivy cache
+### 23 Oct 2020
+
+(e. g. when IntelliJ complains about missing libraries)
+
+1. Get a distribution JAR of Apache Ivy (if you have Fedora,
+   `dnf install ivy` will place it at `/usr/share/java/apache-ivy/ivy.jar`)
+2. Use the `-dependency` flag, e. g.:
+
+   > java -jar ivy.jar -dependency org.scala-lang scala-compiler 2.12.8
+
+Ivy will complain about missing parts of project definition (duh),
+but the artifact will be downloaded and stored in the cache!
