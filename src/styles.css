@@ -28,7 +28,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #bd5d38;
+  --primary: #19a049;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -94,12 +94,12 @@ body {
 }
 
 .text-primary {
-  color: #bd5d38!important
+  color: #19a049!important
 }
 
 a.text-primary:focus,
 a.text-primary:hover {
-  color: #824027!important
+  color: #036536!important
 }
 
 .text-dark {
@@ -187,14 +187,14 @@ p.lead {
 }
 
 .bg-primary {
-  background-color: #bd5d38!important
+  background-color: #19a049!important
 }
 
 a.bg-primary:focus,
 a.bg-primary:hover,
 button.bg-primary:focus,
 button.bg-primary:hover {
-  background-color: #964a2c!important
+  background-color: #0c7f44!important
 }
 
 .bg-dark {
@@ -209,13 +209,13 @@ button.bg-dark:hover {
 }
 
 a {
-  color: #bd5d38;
+  color: #19a049;
   text-decoration: none;
   background-color: transparent
 }
 
 a:hover {
-  color: #824027;
+  color: #036536;
   text-decoration: underline
 }
 
