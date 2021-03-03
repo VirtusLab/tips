@@ -91,7 +91,7 @@ Most Linux distros have it available out of the box; OS X and some Docker contai
 require installing `gettext` package first ![](macbook)
 
 
-## Shell brace extension
+## Shell brace expansion
 ### 26 Jun 2020
 
 Instead of typing file path twice in commands like `mv` or `cp` (e.g. `mv my/file/with/a/very/long/name.xd my/file/with/a/very/long/name.xd.bak`)

@@ -52,29 +52,6 @@ a selected file from the archive, you likely
 want to use tar.gz ![a](head-banging-parrot)
 
 
-## Listing Java processes
-### 30 Apr 2020
-
-To list running `java` processes,
-instead of brittle constructs like
-`ps aux | grep java`, use Oracle
-JDK's/OpenJDK's `jps -ml` ![](java)
-
-> $ jps -ml <br/>
-> 2102755 /usr/share/sbt/bin/sbt-launch.jar <br/>
-> 2101064 com.intellij.idea.Main <br/>
-> 2107882 jdk.jcmd/sun.tools.jps.Jps -ml <br/>
-
-As opposed to `ps aux | grep java`, this only
-lists the PIDs of actual `java` processes and
-not the ones that just happen to contain
-`java` in their args; also, JVM params (that
-are typically less important) are skipped
-unless `-v` option is provided; only main
-class names (`-l` for FQCN) and invocation
-params (`-m`) are listed ![a](shell-party)
-
-
 ## YAML vs JSON
 ### 17 Jul 2020
 

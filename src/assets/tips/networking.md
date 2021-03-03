@@ -11,11 +11,6 @@ incl. loopback (see `ip addr` to list all interfaces) ![](all-the-things) <br/>
 Try `nc -l 0.0.0.0 8080` (_netcat listen_, server socket) and then from another terminal
 `nc 127.0.0.1 8080 <<< hello` (client socket) ![](cat)
 
-Listening on 0.0.0.0 instead of 127.0.0.1 is important if the port needs to be **exposed for other hosts** ![](exhibitionist) <br/>
-For instance, in Kubernetes, if a Dockerized app binds to a port on 127.0.0.1 instead of 0.0.0.0,
-it'll end up **not** reachable via a Service (even if the port is correctly exposed from
-the container & correctly bound in the Service) ![a](party-k8s)
-
 
 ## Terminating SSH connection
 ### 7 Sep 2020

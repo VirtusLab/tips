@@ -11,7 +11,7 @@ This will substitute the typical display/X server (`Xorg`) with a dummy,
 in-memory display server, `Xvfb` ![](linux)
 
 Note that this is distinct from running Chrome with `--headless`
-or JVM with `-Djava.awt.headless`; these use the explicit support
+or JVM with `-Djava.awt.headless=true`; these use the explicit support
 for a headless mode implemented in Chrome 59+/AWT,
 while `xvfb-run` just attaches a different display server to the process
 (and hence the process doesn't even need to know that it's being run headlessly,

@@ -55,7 +55,7 @@ but not in the resulting image, you can use the **multi-stage builds** in your D
 > FROM ubuntu:latest <br/>
 > COPY --from=cloned-repo /repo /repo <br/>
 > WORKDIR /repo <br/>
-> RUN <build command for my-awesome-repo> <br/>
+> RUN &lt;build command for my-awesome-repo&gt; <br/>
 > .... <br/>
 
 `alpine/git` provides a lightweight image (<30MB) with basically just git inside ![](snow_capped_mountain) <br/>

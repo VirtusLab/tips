@@ -1,3 +1,26 @@
+## Listing Java processes
+### 30 Apr 2020
+
+To list running `java` processes,
+instead of brittle constructs like
+`ps aux | grep java`, use Oracle
+JDK's/OpenJDK's `jps -ml` ![](java)
+
+> $ jps -ml <br/>
+> 2102755 /usr/share/sbt/bin/sbt-launch.jar <br/>
+> 2101064 com.intellij.idea.Main <br/>
+> 2107882 jdk.jcmd/sun.tools.jps.Jps -ml <br/>
+
+As opposed to `ps aux | grep java`, this only
+lists the PIDs of actual `java` processes and
+not the ones that just happen to contain
+`java` in their args; also, JVM params (that
+are typically less important) are skipped
+unless `-v` option is provided; only main
+class names (`-l` for FQCN) and invocation
+params (`-m`) are listed ![a](shell-party)
+
+
 ## Early evaluation of lazy val
 ### 24 Aug 2020
 
@@ -40,7 +63,7 @@ You'll be especially surprised how non-intuitive it is to
 [null-safely initialize cyclic structures](https://checkerframework.org/manual/#circular-initialization) ![](hushed)
 
 
-## Futures
+## Dangling Futures
 ### 9 Feb 2021
 
 When using Futures in Scala, beware of leaving them **dangling**

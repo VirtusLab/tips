@@ -38,6 +38,7 @@ They've already got a well-established initialism/acronym: `IIRC`, `IIUC`, `CMII
 One of the best/easiest things to do in order to improve pronunciation in any modern language
 is to start relying on **IPA** (International Phonetic Alphabet) instead of voice recordings
 or semi-formal notation (like `now·tei·shn`) for learning ![](beer)
+
 This is esp. important in English which is notoriously **non-deterministic**
 (e.g. has 7 different ways to read _ough_ depending on... nothing in particular) ![a](this_is_fine)
 

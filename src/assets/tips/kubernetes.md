@@ -3,7 +3,7 @@
 
 To spin up a development Kubernetes cluster locally (or from a VM in CI)
 as easily as possible, use **kind** ([Kubernetes in Docker](https://kind.sigs.k8s.io)) ![](heavy_check_mark)
-Just run `kind create cluster` and merge the output of `kind get kubeconfig` into `~/.kube/config` ![](gear)
+Just run `kind create cluster` and the new cluster's data should be automatically added into `~/.kube/config` ![](gear)
 
 Kind uses Docker containers (by default, `kindest/node` image) as cluster's nodes.
 This is much lighter & more CI-suitable approach than what `minikube` offers

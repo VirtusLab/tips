@@ -3,7 +3,7 @@
 
 Modern dependency management systems can be (roughly, many shades in-between exist)
 divided into 2 major groups based on the answer to the question: <br/>
-**Should dependency of package X be provided to/shipped with package X in the
+**Should all dependencies of package X be provided to/shipped with package X in the
 exact versions required by X**? ![](package) <br/>
 This is in fact pretty similar to: **can any package Y live in the runtime environment
 in 2+ different versions**? ![a](twins-parrot)
