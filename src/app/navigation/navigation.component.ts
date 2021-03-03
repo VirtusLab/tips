@@ -11,10 +11,20 @@ import {TipGroups} from "../tip-groups";
 export class NavigationComponent implements OnInit {
   public tipGroups: Promise<TipGroups>;
 
+  public isMobileNavigationOpened: boolean = false;
+
   constructor(private tipGroupsService: TipGroupsService) {}
 
   ngOnInit(): void {
     this.tipGroups = this.tipGroupsService.getTipGroups();
+  }
+
+  closeMobileNavigation(): void {
+    this.isMobileNavigationOpened = false;
+  }
+
+  toggleMobileNavigation(): void {
+    this.isMobileNavigationOpened = !this.isMobileNavigationOpened;
   }
 
   public inOutExpoEasing: EasingLogic = (t: number, b: number, c: number, d: number): number => {

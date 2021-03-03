@@ -865,7 +865,3 @@ section.tips-section .tips-content {
   margin-right: auto;
   margin-left: auto
 }
-
-.collapse:not(.show) {
-  display: none
-}

@@ -57,7 +57,17 @@ nav {
 .navbar-collapse {
   flex-basis: 100%;
   flex-grow: 1;
-  align-items: center
+  align-items: center;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+
+.collapse:not(.show) {
+  max-height: 0;
+}
+
+.collapse.show {
+  max-height: 1111px;
 }
 
 .navbar-toggler {
@@ -232,12 +242,15 @@ nav {
   outline-color: #449c65
 }
 
+#sideNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 @media (min-width:992px) {
   #sideNav {
     text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
     display: flex;
     flex-direction: column;
     width: 17rem;
@@ -258,6 +271,7 @@ nav {
     align-items: flex-start;
     flex-grow: 0;
     width: 100%;
+    max-height: 2000px;
     margin-bottom: auto
   }
   #sideNav .navbar-collapse .navbar-nav {
