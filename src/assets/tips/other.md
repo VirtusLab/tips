@@ -17,7 +17,7 @@ time as UTC, but that's hard to enforce in practice ![](niby-czlowiek-wiedzial)
 For instance, in a JVM-based app, a single call to
 `LocalDateTime.now()` will pollute the domain with a
 value that's implicitly timezoned to **default** TZ of
-the machine &mdash; which is typically **different from UTC**! ![a](pepepanic)
+the machine &mdash; which is typically **different from UTC**! ![](scream)
 
 As a rule of thumb, always use `java.time.ZonedDateTime` (on JVM),
 `TIMESTAMP WITH TIME ZONE` (in SQL) or generally: the timestamp types

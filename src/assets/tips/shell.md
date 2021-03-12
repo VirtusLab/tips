@@ -25,7 +25,7 @@ Also, check [colordiff](https://www.colordiff.org/) for green/red output ![](art
 ### 14 Apr 2020
 
 For production/CI-related shell (sh/bash) scripts, you pretty much always want to use
-so-called _strict mode_ ![](grammar-nazi)
+so-called _strict mode_ ![a](shell-party)
 
 > set -e -o pipefail -u
 
@@ -60,7 +60,7 @@ to the same file, use `&>`: `./my-command &>/dev/null` ![](and)
 
 To slurp file contents into a var,
 use `$(<...)`:`foo=$(<foo.txt)`; in particular,
-use `$(</dev/stdin)` to read the entire stdin ![a](pacman)
+use `$(</dev/stdin)` to read the entire stdin ![a](pacman-dark)
 
 To put verbatim tab/newline etc. characters
 into a shell string, use `$'....'`-style
@@ -78,7 +78,7 @@ use `sed -i.bak 's/<regex-from>/<string-to>/' <file>` ![a](regex-party)
 `sed -i` is notorious for non-portability between
 Linux/Docker containers and OS X ![](apple) <br/>
 Neither of `sed -i <expr> <file>` or `sed -i '' <expr> <file>`
-will work on both systems ![](fuggg) <br/>
+will work on both systems ![](no_good) <br/>
 To guarantee portability between GNU (Linux) and BSD (OS X) sed,
 you should use the `-i<suffix>`, e.g. `-i.bak` as above ![](gnu) <br/>
 This will also save the original `<file>` under `<file><suffix>` (unlike `-i` or `-i ''`),
@@ -100,12 +100,12 @@ you can use shell brace expansion: `mv my/file/with/a/very/long/name.xd{,.bak}` 
 To make sure `mv` and `cp` don't overwrite existing destinations with no warning,
 replace them with an alias that adds `-i`/`--interactive` option: `alias cp='cp -i'`.
 Same point applies to `rm`: `-i` makes `rm` ask about whether to delete a file
-(unless `-f` is provided) ![](fuggg)
+(unless `-f` is provided) ![](no_good)
 
 As a last-resort protection against catastrophic file removal in `-rf` mode,
 it's also worth passing `-v`/`--verbose` option to `rm` so that the files are listed
 while getting removed; this way a removal can be Ctrl+C-interrupted midway
-if it goes wrong (e.g. in case of a superfluous space like in `rm -rfv ~ /.local/bin`) ![a](pepepanic)
+if it goes wrong (e.g. in case of a superfluous space like in `rm -rfv ~ /.local/bin`) ![](scream)
 
 
 ## Passing environment vars

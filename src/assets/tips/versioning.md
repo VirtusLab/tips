@@ -55,7 +55,7 @@ when a deployment entails a DB schema migration ![](goncern)
 Always ensure that the schema changes are **backwards-compatible** wrt.
 parts of the schema that are still used by the app ![](back) <br/>
 For a relational DB, e.g. removing a column that's used by the old version
-can potentially crash the old instances while the new version is still being deployed ![](azure-on-fire) <br/>
+can potentially crash the old instances while the new version is still being deployed ![](fire) <br/>
 Even regardless of the window of time around the deployment, in case the new version
 needs to be **rolled back** after the DB is already migrated, the old version must be able
 to cooperate with the new schema ![](arrow_right_hook)

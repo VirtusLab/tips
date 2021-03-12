@@ -3,7 +3,7 @@
 
 Docker images tend to get bloated (1GB+) very quickly after
 installing extra software... even if the base image is
-a lightweight `alpine` ![](blowfish)
+a lightweight `alpine` ![](feather)
 
 Make sure the software that's **only necessary during the image
 build** doesn't make it to the final image ![](building_construction) <br/>
@@ -18,10 +18,10 @@ not** help and even makes the overall situation worse:
 
 Docker images are stored in layers corresponding to
 Dockerfile instructions. Even if software is removed
-in instruction (2), it's already stored in layer (1)! ![](fuggg) <br/>
+in instruction (2), it's already stored in layer (1)! ![](no_good) <br/>
 To avoid image bloat, remove the no longer
 necessary packages in **the same layer where
-they're installed** ![](general-spurdo)
+they're installed** ![](blowfish)
 
 > RUN apk add foo bar moar-packages \ <br/>
 > &nbsp;&nbsp;&nbsp;&nbsp; && do-some-stuff-using-installed packages ... \ <br/>
@@ -66,7 +66,7 @@ Note that usually just the latest commit (`--depth=1`) is really needed when clo
 ### 18 Jan 2021
 
 Beware of leaving credentials/access tokens etc. in a Docker image after the build &mdash;
-they can easily fall into unauthorized hands ![a](pepepanic)
+they can easily fall into unauthorized hands ![](scream)
 
 If any secret needs to be available during the image build (e.g. to download private packages),
 **do not** `COPY` it into the image, even if it's later `rm`ed ![](stop-sign) <br/>

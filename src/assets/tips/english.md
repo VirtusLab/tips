@@ -22,7 +22,7 @@ Looking for a phrase meaning `get things done` in the sense similar to Polish _o
 How about `sort (sth) out` or `get sth sorted` ![](male-construction-worker)
 
 Want to specify that the given review comment/remark is an insignificant/just-nice-to-have one? <br/>
-How about saying that it's a `Nitpick: ...` or just `Nit: ...` ![](grammar-nazi)
+How about saying that it's a `Nitpick: ...` or just `Nit: ...` ![](abc)
 
 Bringing up the same point again and again (e.g. on the review)? <br/>
 Just use `Ditto` (aka `the same thing again`, from Italian, adopted in informal English) ![](it)
@@ -86,7 +86,7 @@ e.g. Anna is `'ænə` and not `'æn-nə`
 
 As of 2020, when the gender of the subject isn't known (_as in, Each participant should provide HIS (???) photo_),
 the golden standard is to use `they` rather than e.g. `he/she`, let alone just `he`:
-_Each participant should provide THEIR photo_ ![](nooo-you-cant-just)
+_Each participant should provide THEIR photo_ ![](frame_with_picture)
 
 Unlike in Polish where words like `który`, `że` etc. are usually preceded by a comma,
 there's usually **no comma** before `that`: _I learned that all of the employees that you mentioned still work here_ ![](semicolon)

@@ -56,7 +56,7 @@ invocation will look like:
 Note that the common form `git rebase feature/base`
 is just a special case of the `--onto A B C`
 invocation that assumes certain (often unintended)
-default values ![](fuggg)
+default values ![](no_good)
 
 Also, it's almost always a good idea to also
 pass `-i`/`--interactive` option to rebase (or select
@@ -110,7 +110,7 @@ The side effect is that local git repositories
 usually accumulate a massive number of useless
 mirrors even after their counterparts are long
 gone from the remote repository
-(see `git branch -r` in your repo now) ![](fuggg)
+(see `git branch -r` in your repo now) ![](no_good)
 
 To make sure `git fetch` also removes your local
 `origin/...` branches corresponding to the branches
@@ -192,7 +192,7 @@ but every time the commit is "modified", they are updated to reflect the current
 (which might differ from the original author) and timestamp ![](writing_hand)
 
 `git log` only displays author&author date by default; use `git log --pretty=fuller`
-to include committer&commit date as well ![](jon-pretty) <br/>
+to include committer&commit date as well ![](+1) <br/>
 If author differs from committer, GitHub indicates that by `X authored and Y committed...`
 in the commit listing; actually, GitHub also takes **pusher** into account...
 which can be different from both author and committer ![](github)

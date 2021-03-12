@@ -1,7 +1,7 @@
 ## Operators precedence
 ### 30 Mar 2020
 
-`^foo|bar$` won't just match strings `foo` and `bar`, but also e.g. `foo_123` and `rabarbar` ![](fuggg)
+`^foo|bar$` won't just match strings `foo` and `bar`, but also e.g. `foo_123` and `rabarbar` ![](no_good)
 
 In fact, the (simplified) precedence of operators in regexes is, from strongest to weakest:
 1. Duplication: `a*`, `b+`, `c?`

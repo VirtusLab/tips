@@ -10,7 +10,7 @@ prefers to focus on trivilialites like a place for employees to store their bike
 
 This is unfortunately a natural tendency - the human **need to be useful** often ends up
 taking over the need to achieve the goal (esp. if the situation doesn't give a chance
-to be personally useful towards that goal) ![](sad_pepe)
+to be personally useful towards that goal) ![](sad)
 
 In the nuclear plant example, committee members are more willing to discuss a trivial topic
 (bike sheds) where they're more likely to have a useful insight, than the incomparably
@@ -37,7 +37,7 @@ from IMs like Slack completely, or install a dedicated notification silencer app
 You should also take into account that the person on the receiving end of the communication
 might have their desktop notifications enabled... as a paranoid measure, it's better not to
 communicate anything confidential until the other person starts responding to you
-(at which point they're less likely to accidentally leak the message via a screenshare) ![a](pepepanic)
+(at which point they're less likely to accidentally leak the message via a screenshare) ![](scream)
 
 Along the same lines, it's always best to share as little screen as possible
 (single browser tab or application window instead of the entire desktop). <br/>

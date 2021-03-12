@@ -54,7 +54,7 @@ when calling method `foo` from `X`'s constructor... it still isn't enough ![](po
 by an invocation of **subclass** (say, `Y`) **c'tor**. <br/>
 If method `foo` is overridden in `Y`, and `Y#foo` **accesses some fields/vals
 defined in `Y`** (rather than in `X`), then an access to an uninitialized field
-can still happen ![](sad_pepe)
+can still happen ![](sad)
 
 Fun fact: a complete (zero-NPE) compile-time solution of this problem for Java
 is provided by [Nullness Checker](https://checkerframework.org/manual/#nullness-checker),

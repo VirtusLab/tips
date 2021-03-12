@@ -41,3 +41,10 @@ class BarelyReadableEmoji(ForbiddenEmoji):
     def __init__(self, emoji_name: str, emoji_instead: Optional[str] = None):
         super(BarelyReadableEmoji, self).__init__(emoji_name=emoji_name, reason="it's barely readable",
                                                   emoji_instead=emoji_instead)
+
+
+@dataclass(init=False)
+class ControversialEmoji(ForbiddenEmoji):
+    def __init__(self, emoji_name: str, emoji_instead: Optional[str] = None):
+        super(ControversialEmoji, self).__init__(emoji_name=emoji_name, reason="it's too controversial",
+                                                 emoji_instead=emoji_instead)
