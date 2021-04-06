@@ -159,3 +159,21 @@ the brand name gradually became a noun/adjective on its own ![](lower_left_paint
 Somebody you're gossiping about just entered the room/video call?
 Something that you're talking about just unexpectedly happened? <br/>
 _**Speak of the devil!**_ (Polish: _o wilku mowa!_) ![a](evil-parrot)
+
+
+## Vocabulary tips 1
+### 25 Mar 2021
+
+In technical language:
+You rather want to use **analogous** rather than **~~analogical~~**. <br/>
+_Analogical_ (i.e. _based on an analogy rather than a literal meaning_) is closer to _metaphorical_
+and is almost non-existent in tech language ![](philosoraptor)
+
+You rather want to use **classic** rather **~~classical~~**. <br/>
+_Classical_ is closer to _traditional_, and the meaning you'd typically like in tech language is
+_high-quality representative of its class_, i. e. _classic_ ![](milord)
+
+Both **alphebetic/numeric** and **alphebetical/numerical** are useful, although with a different meaning. <br/>
+_Alphabetic/numeric_ means consisting of _letters/numbers_: e.g. _keyboard, address, suffix_. <br/>
+_Alphabetical/numerical_ means _relating to/done in the domain of letters/numbers_:
+e.g. _alphabetical order, numerical integration_ ![](professor-spurdo) 

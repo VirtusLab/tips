@@ -87,3 +87,16 @@ is `RUN --mount`, here shown for `.npmrc` file:
 
 With this `Dockerfile`, to build the image with your local `.npmrc` file mounted just to the `RUN` step, <br/>
 run  `DOCKER_BUILDKIT=1 docker build --secret id=npmrc,src=$HOME/.npmrc .` ![](bodybuilder)
+
+
+## Run command inside stopped container
+### 30 Mar 2021
+
+Docker does not allow running `docker exec` on stopped containers... even though it's
+sometimes pretty useful, e.g. for diagnosing the cause of the container's failure ![](frown)
+
+Instead, first commit the container's state as a new image:
+> docker commit &lt;container-id-or-name&gt; debug/my-image
+
+and then run this image, overriding the entrypoint to a shell:
+> docker run -it --rm --entrypoint=/bin/sh debug/my-image

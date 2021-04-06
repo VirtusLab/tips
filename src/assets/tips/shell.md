@@ -139,3 +139,24 @@ Fun fact: moreutils also provide a tool called `pee`, which allows for
 `./my-command | pee "./other-command1 param" ./other-command2` ![](a-o-czym-mowa) <br/>
 Note: in bash/zsh, this can also be achieved with `tee` and process substitution:
 `./my-command | tee >(./other-command1 param) >(./other-command2) >/dev/null` ![](tea)
+
+
+## Silent commands failing
+### 15 Mar 2021
+
+Contrary to what one might expect, even in `set -e` mode
+("terminate script on non-zero exit status from any command"), <br/>
+a failure in **command substitution** (i.e. `` `...` `` or   `$(...)`) is completely ignored
+by the shells in most cases ![](shrug)
+
+> export FOO=$(some-flaky-command)
+
+If `some-flaky-command` fails, the script will proceed as usual
+(since the exit code of `export` itself will be 0) ![a](this_is_fine) <br/>
+To avoid surprises, [shellcheck](https://www.shellcheck.net/) recommends splitting the export into two:
+
+> FOO=$(some-flaky-command)  # in `set -e` mode, the entire script will fail if some-flaky-command fails
+> export FOO
+
+Note that this point still stands for almost **any** use of `$(...)` within a command
+(simple `FOO=$(...)` assignment being an exception), not just in the right-hand side of `export` ![](sad-spurdo)

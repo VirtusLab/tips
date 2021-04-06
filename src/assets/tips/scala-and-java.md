@@ -82,3 +82,22 @@ To systematically prevent it from ever happening, add both `-Ywarn-value-discard
 (expressions returning non-Unit value cannot be used as statements) and
 `-Xfatal-warnings` (each warning is an error) to `scalacOptions`;
 you might want to turn it off for `Test` scope, though ![](gear)
+
+
+## Objects insights in scala
+### 4 Mar 2021
+
+Regardless of whether `class Foo` has been explicitly declared, if you declare `object Foo`,
+then the methods of this object will NOT be _instance_ methods of the resulting class `Foo` ![](stop-sign)
+
+Instead, a new class `Foo$` will be generated, containing all the methods
+originally declared in `object Foo`. <br/>
+`Foo.getClass` will return a handle to this very `Foo$` class. <br/>
+The actual `Foo$`-typed singleton instance corresponding to `object Foo` will be stored in
+`MODULE$` static field of class `Foo$` ![](java) <br/> 
+Btw, "module" is a term used internally in Scala for objects (e.g. in Scala Reflection APIs),
+probably to discern the Scala-specific "singleton" meaning of the word "object" from the regular
+OOP meaning (as in, "object" = "instance of a class") ![](mirror)
+
+For each method in `object Foo`, however, Scala compiler will still generate a _static_ method
+in class `Foo` that simply delegates the call to `Foo$.MODULE$` ![a](portal-parrot)

@@ -39,7 +39,12 @@ export function markedOptionsFactory(): MarkedOptions {
   const renderer = new MarkedRenderer();
 
   renderer.image = (href: string, title: string, text: string) => {
-    return '<img src="assets/emoji/' + href + (text === 'a' ? '.gif' : '.png') + '" title="' + href + '" alt="' + href + '" class="emoji"/>';
+    if (text === '' || text === 'a') {
+      return '<img src="assets/emoji/' + href + (text === 'a' ? '.gif' : '.png') + '" title="' + href + '" alt="' + href + '" class="emoji"/>';
+    } else {
+      return '<img src="' + (href.startsWith('http') ? '' : 'assets/images/') + href + '" ' + (title != '' ? 'title="' + title + '" alt="' + title + '" ' :
+        'title="' + text + '" alt="' + text + '" ') + 'class="image"/>';
+    }
   }
 
   return {

@@ -65,3 +65,12 @@ In particular, the below is a valid YAML
 > &nbsp;&nbsp; hello world: foo bar, <br/>
 > &nbsp;&nbsp; lorem ipsum: [dolor, sit, amet] <br/>
 > } <br/>
+
+
+## JetBrains products management
+### 23 Mar 2021
+
+To easily manage what JetBrains products are installed on your machine (as well as manage their updates),
+use [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/):
+
+![jetbrains toolbox](jetbrains_toolbox.png)
