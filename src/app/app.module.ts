@@ -59,7 +59,7 @@ export function markedOptionsFactory(): MarkedOptions {
       }
       imgClass = 'image';
     }
-    return '<img src="' + imgSrc + '" title="' + imgTitle + '" alt="' + imgAlt + '" class="' + imgClass + '"/>';
+    return `<img src="${imgSrc}" title="${imgTitle}" alt="${imgAlt}" class="${imgClass}" />`;
   }
 
   return {
