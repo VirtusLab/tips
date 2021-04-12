@@ -84,7 +84,7 @@ To systematically prevent it from ever happening, add both `-Ywarn-value-discard
 you might want to turn it off for `Test` scope, though ![](gear)
 
 
-## Objects insights in scala
+## Scala objects under the hood
 ### 4 Mar 2021
 
 Regardless of whether `class Foo` has been explicitly declared, if you declare `object Foo`,

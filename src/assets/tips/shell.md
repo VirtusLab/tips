@@ -141,7 +141,7 @@ Note: in bash/zsh, this can also be achieved with `tee` and process substitution
 `./my-command | tee >(./other-command1 param) >(./other-command2) >/dev/null` ![](tea)
 
 
-## Silent commands failing
+## Command substitution failing silently
 ### 15 Mar 2021
 
 Contrary to what one might expect, even in `set -e` mode
@@ -155,7 +155,7 @@ If `some-flaky-command` fails, the script will proceed as usual
 (since the exit code of `export` itself will be 0) ![a](this_is_fine) <br/>
 To avoid surprises, [shellcheck](https://www.shellcheck.net/) recommends splitting the export into two:
 
-> FOO=$(some-flaky-command)  # in `set -e` mode, the entire script will fail if some-flaky-command fails
+> FOO=$(some-flaky-command)  # in `set -e` mode, the entire script will fail if some-flaky-command fails <br/>
 > export FOO
 
 Note that this point still stands for almost **any** use of `$(...)` within a command
