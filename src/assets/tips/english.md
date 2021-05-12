@@ -177,3 +177,19 @@ Both **alphebetic/numeric** and **alphebetical/numerical** are useful, although 
 _Alphabetic/numeric_ means consisting of _letters/numbers_: e.g. _keyboard, address, suffix_. <br/>
 _Alphabetical/numerical_ means _relating to/done in the domain of letters/numbers_:
 e.g. _alphabetical order, numerical integration_ ![](professor-spurdo) 
+
+
+## Proper pronunciation 4
+### 22 Apr 2021
+
+Pairs of numbers like 15&50, 17&70 etc. are notoriously similar in pronunciation...
+in fact, it's the **syllable stress** that distinguishes them much better than the
+difference between `-i` and `-i:n` suffix ![](goncern) <br/>
+In _-teens_, it's the **teen syllable** itself that's stressed: `fɪf'ti:n`, `sevn'ti:n` ![](point_right) <br/>
+In _-ties_, it's the **first syllable** that's stressed instead: `'fɪfti`, `'sevnti` ![](point_left) <br/>
+The same point applies to ordinal numbers: _15th_ is `fɪf'ti:nθ` while _70th_ is `'sevntiəθ` ![](th)
+
+_Comment_ and _command_ are a similar example: two confusable words, with slightly different sounds
+but completely different syllable stress. <br/>
+_Comment_ is `'kɒment` (first syllable stressed) ![](speech_balloon) <br/>
+_Command_ is `kə'mɑ:nd` (second syllable stressed) ![](male-police-officer)

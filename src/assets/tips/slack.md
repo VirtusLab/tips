@@ -35,3 +35,13 @@ Once a message gets the focus, multiple single-key shortcuts are available,
 including **Delete**, **E** (again, just edit), **R** (add emoji reaction) or **U**
 (mark conversation as unread from this message) ![](keyboard) <br/>
 Also, see **Ctrl+?** for all available shortcuts ![](bookmark_tabs)
+
+
+## One-click reactions
+### 12 Apr 2021
+
+Under top-left corner dropdown menu > _Preferences_ > _Messages & media_, it's possible to configure
+the three one-click reactions that show up next to each message when hovered,
+saving the need to open the emoji selector dialog:
+
+![one-click reactions](one-click_reactions.png)
