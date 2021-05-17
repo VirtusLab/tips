@@ -67,22 +67,13 @@ In particular, the below is a valid YAML
 > } <br/>
 
 
-## JetBrains products management
-### 23 Mar 2021
-
-To easily manage what JetBrains products are installed on your machine (as well as manage their updates),
-use [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/):
-
-![jetbrains toolbox](jetbrains_toolbox.png)
-
-
 ## Birthday paradox
 ### 19 Apr 2021
 
 How many students there need to be in a class so that there's a 50% chance of _any_ 
 (not a _given one_!) birth date to repeat, assuming each of 365 days has an equal chance
 of being a birth date? ![](birthday) <br/>
-The answer is counterintuitively low – only **23** (while people often say sth around 90 or 180)...
+The answer is counterintuitively low &mdash; only **23** (while people often say sth around 90 or 180)...
 hence the birthday paradox ![](surprised_pikachu)
 
 This insight is useful in many contexts where values from a limited set are considered...
@@ -90,24 +81,6 @@ e.g. how many [objects (commits/trees/blobs)](#git/commit-storage) there needs t
 so that there's a 50% chance that any two 7-hex-digit hash prefixes clash? ![](git)
 
 The general approximate formula for N possible values is **1.2 × sqrt(N)**,
-so since there's 16^7 = 2^28 possible values of 7-hex-digit hash prefix, <br/>
-then if a repo has 1.2 × sqrt(2^28) = 1.2 × 2^14 = ~20k objects (see [git-sizer](https://github.com/github/git-sizer)),
+so since there's 16<sup>7</sup> = 2<sup>28</sup> possible values of 7-hex-digit hash prefix, <br/>
+then if a repo has 1.2 × sqrt(2<sup>28</sup>) = 1.2 × 2<sup>14</sup> = ~20k objects (see [git-sizer](https://github.com/github/git-sizer)),
 there's 50% chance of a prefix clash ![](crossed_swords)
-
-
-## Issues link in JB products
-### 7 May 2021
-
-If you want to reference issues in your code from JetBrains IDE, you can add a regex pattern
-to the settings and go directly to the issue by just clicking on it in the comment.
-1. `Preferences` -> `Issue Navigation`
-2. ![](heavy_plus_sign)
-3. A simple regex:
-
-> Issue ID: #(\d+) <br/>
-> Issue link: https://github.com/VirtuslabRnD/&lt;project&gt;/issues/$1
-
-4. Now you can just click on the link in the comment (with command on Mac)
-   and you go directly to the issue on github!
-   
-This is saved per project, so you don’t need to worry about overwriting the settings.

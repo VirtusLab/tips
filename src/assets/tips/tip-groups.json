@@ -16,6 +16,10 @@
     "name": "Git"
   },
   {
+    "id": "jetbrains-products",
+    "name": "JetBrains products"
+  },
+  {
     "id": "kubernetes",
     "name": "Kubernetes"
   },

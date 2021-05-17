@@ -6,9 +6,9 @@ One of the common traps in any discussions, tech and non-tech alike (including c
 The term is derived from a hypothetical committee debating a **nuclear power plant design**,
 which instead of spending the time on the hard&important matters (the **reactor**),
 prefers to focus on trivilialites like a place for employees to store their bikes
-(aka **bike sheds**) - in other words, the committee is _bikeshedding_ ![](atom_symbol)
+(aka **bike sheds**) &mdash; in other words, the committee is _bikeshedding_ ![](atom_symbol)
 
-This is unfortunately a natural tendency - the human **need to be useful** often ends up
+This is unfortunately a natural tendency &mdash; the human **need to be useful** often ends up
 taking over the need to achieve the goal (esp. if the situation doesn't give a chance
 to be personally useful towards that goal) ![](sad)
 

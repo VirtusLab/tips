@@ -23,3 +23,12 @@ jobs:
         run: pip3 install dataclasses
       - name: Run check
         run: python3 ci_checks/emoji/check.py
+
+  mdash-check:
+    name: Check hyphen against mdash usages in markdown files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run check
+        run: python3 ci_checks/mdash/check.py
