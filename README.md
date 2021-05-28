@@ -1,4 +1,4 @@
-# TipsOfTheDay
+# Tips Of The Day
 
 Tips for every day by VirtusLab
 

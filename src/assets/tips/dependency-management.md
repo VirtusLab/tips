@@ -47,11 +47,11 @@ in the upstream yet ![](arrow_up)
 ## Download a single artifact into the Ivy cache
 ### 23 Oct 2020
 
-(e. g. when IntelliJ complains about missing libraries)
+(e.g. when IntelliJ complains about missing libraries)
 
 1. Get a distribution JAR of Apache Ivy (if you have Fedora,
    `dnf install ivy` will place it at `/usr/share/java/apache-ivy/ivy.jar`)
-2. Use the `-dependency` flag, e. g.:
+2. Use the `-dependency` flag, e.g.:
 
    > java -jar ivy.jar -dependency org.scala-lang scala-compiler 2.12.8
 

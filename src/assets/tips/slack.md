@@ -3,7 +3,7 @@
 
 If you have a url in the clipboard you can select the word you want to turn into a link and press
 `Ctrl + V` on ![](linux) (or `CMD + V` on ![](apple)) and your word becomes a link! ![a](haha-babuga) <br/>
-You need to have rich editor for that to work (which is default).
+You need to have rich editor for that to work (which is the default).
 
 
 ## Conversations with more people

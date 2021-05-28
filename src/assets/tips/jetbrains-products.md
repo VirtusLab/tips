@@ -7,7 +7,7 @@ use [JetBrains Toolbox](https://www.jetbrains.com/toolbox-app/):
 ![jetbrains toolbox](jetbrains_toolbox.png)
 
 
-## Issues link in JB products
+## Linking issues in JB IDEs
 ### 7 May 2021
 
 If you want to reference issues in your code from JetBrains IDE, you can add a regex pattern
@@ -19,7 +19,6 @@ to the settings and go directly to the issue by just clicking on it in the comme
 > Issue ID: #(\d+) <br/>
 > Issue link: https://github.com/VirtuslabRnD/&lt;project&gt;/issues/$1
 
-4. Now you can just click on the link in the comment (with command on Mac)
-   and you go directly to the issue on github!
+4. Now you can just click on the link in the comment (with Command on Mac), and you go directly to the issue on GitHub!
 
-This is saved per project, so you don't need to worry about overwriting the settings.
+This setting is kept on a per-project basis, so you don't need to worry about overwriting the settings.

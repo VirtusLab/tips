@@ -66,7 +66,7 @@ To put verbatim tab/newline etc. characters
 into a shell string, use `$'....'`-style
 strings instead of regular `'...'` or `"..."`: <br/>
 
-> ./my-command "this is " $'my string \t\n'
+> ./my-command "this is" $'\tmy string\n'
 
 
 ## Multiplatform sed

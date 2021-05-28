@@ -21,7 +21,7 @@ Most regex engines allow you to specify that the given string **must/must not** 
 * `qux(?=foo|bar)` will only capture `qux` occurrences followed by `foo` or `bar` (positive lookahead) ![](arrow_right) ![a](thumbsup_all)
 * `qux(?!foo|bar)` will only capture `qux` occurrences **not** followed by `foo` or `bar` (negative lookahead) ![](arrow_right) ![](thumbsdown)
 
-This is supported by default by Java/Kotlin/Scala, Python, JS (lookahead only); in `git grep`/GNU `grep`, you need to pass `turbo mode` aka `-P`/`--perl-regexp` flag ![](camel)
+This is supported by default by Java/Kotlin/Scala, Python, JS (lookahead only); in `git grep`/GNU `grep`, you need to pass _power mode_ aka `-P`/`--perl-regexp` flag ![](camel)
 
 In `grep`, this is esp. useful in combination with `-o` (aka `--only-matching`, prints only the part matching the regex, not the whole matched line):
 

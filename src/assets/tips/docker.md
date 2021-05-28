@@ -52,6 +52,7 @@ but not in the resulting image, you can use the **multi-stage builds** in your D
 > FROM alpine/git:latest as cloned-repo <br/>
 > RUN git clone --depth=1 https://github.com/VirtusLab/my-awesome-repo.git /repo <br/>
 > &#35;&#35;&#35; Everything from the first stage will be discarded unless explicitly `COPY`-ed in a subsequent stage <br/>
+> <br/>
 > FROM ubuntu:latest <br/>
 > COPY --from=cloned-repo /repo /repo <br/>
 > WORKDIR /repo <br/>

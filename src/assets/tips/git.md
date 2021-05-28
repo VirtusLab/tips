@@ -69,7 +69,7 @@ incorrect ![a](worg-brom-gome)
 ## Commit storage
 ### 7 May 2020
 
-Contrary to the popular belief, git does not store
+Contrary to the popular belief, git does **not** store
 commits as **diffs** (well known from `git diff`,
 `git log -p`, `git show` or GitHub/Bitbucket commit/PR view). <br/>
 Instead, commits are stored as **full snapshots**
@@ -99,7 +99,7 @@ the need for e.g. [Git LFS](https://git-lfs.github.com/)) ![a](github-parrot)
 ## Remove unnecessary remote branches
 ### 28 May 2020
 
-`git fetch` by default does not remove
+`git fetch` by default does **not** remove
 local "mirrors" (`origin/...`) of the
 branches that have been removed in the
 remote repository ![](wastebasket) <br/>
@@ -131,7 +131,7 @@ it guarantees that **anything that's been committed can be retrieved**
 unless the repo's been corrupted or GCed in the meantime
 (there's a reasonably long GC expiry time even for unreachable commits, though) ![](relieved)
 
-To see the history of how the "current branch" aka `HEAD` pointer has been moving in the past,
+To see the history of how the "current commit" aka `HEAD` pointer has been moving in the past,
 view `git reflog` aka the record of all operations that involve moving the `HEAD`
 like checkout, commit, merge, pull, rebase, reset, revert etc. ![](scroll)
 
@@ -153,7 +153,7 @@ that diverged from the local branch; most likely you want to simply reset
 (`git reset --keep @{upstream}`) the local branch to whatever commit the remote branch points to ![](point_left)
 
 
-## Pull requests good practices
+## Good practices for pull requests
 ### 9 Nov 2020
 
 Keep your pull requests small. As a (relatively) old saying goes,

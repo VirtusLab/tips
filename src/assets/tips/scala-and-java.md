@@ -60,7 +60,7 @@ Fun fact: a complete (zero-NPE) compile-time solution of this problem for Java
 is provided by [Nullness Checker](https://checkerframework.org/manual/#nullness-checker),
 at the expense of adding a significant (mental) overhead to the type system.
 You'll be especially surprised how non-intuitive it is to
-[null-safely initialize cyclic structures](https://checkerframework.org/manual/#circular-initialization) ![](hushed)
+[null-safely initialize circular structures](https://checkerframework.org/manual/#circular-initialization) ![](hushed)
 
 
 ## Dangling Futures
@@ -94,7 +94,7 @@ Instead, a new class `Foo$` will be generated, containing all the methods
 originally declared in `object Foo`. <br/>
 `Foo.getClass` will return a handle to this very `Foo$` class. <br/>
 The actual `Foo$`-typed singleton instance corresponding to `object Foo` will be stored in
-`MODULE$` static field of class `Foo$` ![](java) <br/> 
+`MODULE$` static field of class `Foo$` ![](java) <br/>
 Btw, "module" is a term used internally in Scala for objects (e.g. in Scala Reflection APIs),
 probably to discern the Scala-specific "singleton" meaning of the word "object" from the regular
 OOP meaning (as in, "object" = "instance of a class") ![](mirror)

@@ -15,6 +15,9 @@ Try `nc -l 0.0.0.0 8080` (_netcat listen_, server socket) and then from another 
 ## Terminating SSH connection
 ### 7 Sep 2020
 
-Got a hanging ssh session? ![](confounded) Don't have the time to wait for `broken pipe` closing error? ![](cry) Don't want to kill the terminal window? ![](gun)
+Got a hanging ssh session? ![](confounded)
+Don't have the time to wait for `broken pipe` closing error? ![](cry)
+Don't want to kill the terminal window? ![](gun)
 
-Press `[Enter]`, `[~]`, `[.]` in that order to terminate SSH connection only. Check out other possible options by typing `[Enter]`, `[~]` and `[?]` while the shell connection is open.
+Press `[Enter]`, `[~]`, `[.]` in that order to terminate the SSH connection.
+Check out other possible options by typing `[Enter]`, `[~]` and `[?]` while the shell connection is open.

@@ -59,7 +59,7 @@ It's a relatively unknown fact that YAML is designed as a **strict superset** of
 Just try pasting any JSON as an input to a YAML&#10140;JSON (not the other way round!)
 [converter like this one](http://onlineyamltools.com/convert-yaml-to-json) ![](wrench) <br/>
 In particular, the below is a valid YAML
-(although not a valid JSON, since quotation around multi-word strings is missing):
+(although not a valid JSON, since quotations around strings are missing):
 
 > { <br/>
 > &nbsp;&nbsp; hello world: foo bar, <br/>
@@ -70,7 +70,7 @@ In particular, the below is a valid YAML
 ## Birthday paradox
 ### 19 Apr 2021
 
-How many students there need to be in a class so that there's a 50% chance of _any_ 
+How many students there need to be in a class so that there's a 50% chance of _**any**_
 (not a _given one_!) birth date to repeat, assuming each of 365 days has an equal chance
 of being a birth date? ![](birthday) <br/>
 The answer is counterintuitively low &mdash; only **23** (while people often say sth around 90 or 180)...
@@ -83,4 +83,4 @@ so that there's a 50% chance that any two 7-hex-digit hash prefixes clash? ![](g
 The general approximate formula for N possible values is **1.2 × sqrt(N)**,
 so since there's 16<sup>7</sup> = 2<sup>28</sup> possible values of 7-hex-digit hash prefix, <br/>
 then if a repo has 1.2 × sqrt(2<sup>28</sup>) = 1.2 × 2<sup>14</sup> = ~20k objects (see [git-sizer](https://github.com/github/git-sizer)),
-there's 50% chance of a prefix clash ![](crossed_swords)
+there's a 50% chance of a prefix clash ![](crossed_swords)

@@ -9,7 +9,7 @@ But there's a catch! Given that you aim at maintaing the compatibility for a rea
 are typically coming via **minor**, not **major** releases! ![](hushed)
 
 Minor releases usually add new features and deprecate (but not remove!) the existing ones.
-Major releases usually remove the already deprecated features that aren't used anymore &mdash;
+Major releases usually remove the already deprecated features that shouldn't be used anymore &mdash;
 and therefore often don't seem very _significant_ from the consumer's perspective ![](wastebasket)
 
 Note that this is counterintutive to how one might be inclined to think about software versioning &mdash;

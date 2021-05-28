@@ -1,7 +1,7 @@
 ## Local Kubernetes cluster
 ### 5 Aug 2020
 
-To spin up a development Kubernetes cluster locally (or from a VM in CI)
+To spin up a development Kubernetes cluster locally (or from a VM in a CI)
 as easily as possible, use **kind** ([Kubernetes in Docker](https://kind.sigs.k8s.io)) ![](heavy_check_mark)
 Just run `kind create cluster` and the new cluster's data should be automatically added into `~/.kube/config` ![](gear)
 
@@ -33,5 +33,5 @@ if a script `kubectl-g` doing just `kubectl get -o yaml "$@"` lives under `/usr/
 and `kubectl` itself is aliased in the shell as `k`, <br/>
 then e.g. `k g ing` is enough to get the ingresses in the current namespace in YAML format ![](hacker)
 
-Other useful pseudo-aliases might include `k pf` for `kubectl port-forward`, `k desc` for `kubectl describe`, 
+Other useful pseudo-aliases might include `k pf` for `kubectl port-forward`, `k desc` for `kubectl describe`,
 `k del` for `kubectl delete` etc. ![a](party-k8s)

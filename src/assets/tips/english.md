@@ -24,12 +24,12 @@ How about `sort (sth) out` or `get sth sorted` ![](male-construction-worker)
 Want to specify that the given review comment/remark is an insignificant/just-nice-to-have one? <br/>
 How about saying that it's a `Nitpick: ...` or just `Nit: ...` ![](abc)
 
-Bringing up the same point again and again (e.g. on the review)? <br/>
+Bringing up the same point again and again (e.g. in a review)? <br/>
 Just use `Ditto` (aka `the same thing again`, from Italian, adopted in informal English) ![](it)
 
-Tired of writing phrases like `if I remember/understand correctly`? <br/>
+Tired of typing phrases like `if I remember/understand correctly`? <br/>
 They've already got a well-established initialism/acronym: `IIRC`, `IIUC`, `CMIIW` (`correct me if I'm wrong`),
-`AFAICS` (`as far as I can see`, a variation of well-known `AFAIK`) ![](writing_hand)
+`AFAICS` (`as far as I can see`, a variation of the well-known `AFAIK`) ![](writing_hand)
 
 
 ## Pronunciation
@@ -48,14 +48,14 @@ IPA makes you spot the common rules in the otherwise unruly English pronunciatio
 and the correspondence between the written characters and spoken vowel sounds is rather loose;
 the set of **consonants** (aka Polish _spółgłoski_) is relatively narrow, in turn
 
-![](two) **th** corresponds to 2 distinct sounds: it's either voiced `ð` (as in _the_, _that_, _they_, _there_)
+![](two) _**th**_ corresponds to 2 distinct sounds: it's either voiced `ð` (as in _the_, _that_, _they_, _there_)
 or unvoiced `θ` (as in _thousand_, _throw_)
 
-![](three) **the** is pronounced in ~3 different ways: as either `ði:` when stressed (with long `i:`),
+![](three) _**the**_ is pronounced in ~3 different ways: as either `ði:` when stressed (with long `i:`),
 `ði` when before a vowel or `ðə` when before a consonant (where `ə` aka _schwa_ is a
 short unstressed sound between Polish _a/y..._ as the leading _a_ in about)
 
-![](four) **au** is typically long `ɔ:` or `ɑ` as in e.g. _auxiliary_ `ɔ:ɡ'zɪliəri`
+![](four) _**au**_ is typically long `ɔ:` or `ɑ` as in e.g. _auxiliary_ `ɔ:ɡ'zɪliəri`
 (no `u` sound... that's a very common mistake for non-natives)
 
 
@@ -64,7 +64,7 @@ short unstressed sound between Polish _a/y..._ as the leading _a_ in about)
 
 Contrary to the common practice/belief:
 
-![](one) basic is pronounced as `'beɪsɪk` (not `-zɪk`), mustn't is pronounced as `'mʌsnt`
+![](one) _**basic**_ is pronounced as `'beɪsɪk` (not `-zɪk`), _**mustn't**_ is pronounced as `'mʌsnt`
 (not `-znt`)... `'` precedes the stressed syllable in IPA, btw
 
 ![](two) a standalone letter _i_ is almost **never** pronounced like the Polish `i` sound;
@@ -74,7 +74,7 @@ in words like _give_, _is_, _will_, it's actually the `ɪ` sound
 ![](three) in English (except in loanwords), there's **no** sound corresponding to the Polish _c_
 letter as in _Cecylia_; _c_ in words like access (`'ækses`), _center_, _circuit_ (`'sɜ:(r)kɪt`) is just pronounced as `s`
 
-![](four) _-able_ suffix (other than in single-syllable words like _able_ itself, _table_, _fable_ etc.)
+![](four) _**-able**_ suffix (other than in single-syllable words like _able_ itself, _table_, _fable_ etc.)
 is pronounced as `əbl`, not `eɪbl`; hence _vegetable_ is `'vedʒtəbl`, _capable_ is `'keɪpəbl`, _comfortable_ is `'kʌmftəbl` etc.
 
 ![](five) unlike in Polish, double consonant (_nn_, _tt+_ etc.) is almost never pronounced as double;
@@ -105,17 +105,17 @@ em dash to separate parts of the sentence ![](dash)
 
 Contrary to the popular practice/belief:
 
-**FAQ** is more safe to pronounce as `ef eɪ 'kju:` and not in a way, ahem,
+_**FAQ**_ is more safe to pronounce as `ef eɪ 'kju:` and not in a way, ahem,
 resembling certain common English verb ![](a-o-czym-mowa)
 
-**focus** is pronounced as `'fəʊkəs` and not as e.g. `'fɔkjus` ![](mag)
+_**focus**_ is pronounced as `'fəʊkəs` and not as e.g. `'fɔkjus` ![](mag)
 
-**urgent** is pronounced as `'ɜ:(r)dʒ(ə)nt`, with long o-umlaut-like `ɜ:`. <br/>
-Similarly, **occur** is pronounced as `ə'kɜ:(r)`, and not as `ə'kju:(r)`. <br/>
-**occurrence** can be pronunced as `ə'kɜ:rəns` as well as `ə'kʌrəns` with `ʌ` instead (as in _up_) ![](mountain)
+_**urgent**_ is pronounced as `'ɜ:(r)dʒ(ə)nt`, with long o-umlaut-like `ɜ:`. <br/>
+Similarly, _**occur**_ is pronounced as `ə'kɜ:(r)`, and not as `ə'kju:(r)`. <br/>
+_**occurrence**_ can be pronunced as `ə'kɜ:rəns` as well as `ə'kʌrəns` with `ʌ` instead (as in _up_) ![](mountain)
 
-**author** is, quite surprisingly, pronounced as `'ɔːθə(r)` with long Polish `o` sound
-at the beginning (and not `au...`); similarly for **authorize**, **authenticate** etc. ![](o)
+_**author**_ is, quite surprisingly, pronounced as `'ɔːθə(r)` with long Polish `o` sound
+at the beginning (and not `au...`); similarly for _**authorize**_, _**authenticate**_ etc. ![](o)
 
 
 ## Proper pronunciation 3
@@ -147,7 +147,7 @@ Then you're _**killing two birds with one stone**_
 
 Your solution is working, but quick/temporary/not a model one/not meant to last? <br/>
 How about calling it a _**makeshift**_ approach then
-(Polish: _prowizoryczny; **provisional**_ is also a word but more formal,
+(Polish: _prowizoryczny_; _**provisional**_ is also a word but more formal,
 mostly referring to governments/licenses etc.) ![](poorly-renovated-spurdo)
 
 Talking to people from the UK and referring to a thing that's accurate in its
@@ -165,18 +165,19 @@ _**Speak of the devil!**_ (Polish: _o wilku mowa!_) ![a](evil-parrot)
 ### 25 Mar 2021
 
 In technical language:
-You rather want to use **analogous** rather than **~~analogical~~**. <br/>
+
+You want to use **analogous** rather than **~~analogical~~**. <br/>
 _Analogical_ (i.e. _based on an analogy rather than a literal meaning_) is closer to _metaphorical_
 and is almost non-existent in tech language ![](philosoraptor)
 
-You rather want to use **classic** rather **~~classical~~**. <br/>
+You want to use **classic** rather than **~~classical~~**. <br/>
 _Classical_ is closer to _traditional_, and the meaning you'd typically like in tech language is
-_high-quality representative of its class_, i. e. _classic_ ![](milord)
+_high-quality representative of its class_, i.e. _classic_ ![](milord)
 
-Both **alphebetic/numeric** and **alphebetical/numerical** are useful, although with a different meaning. <br/>
-_Alphabetic/numeric_ means consisting of _letters/numbers_: e.g. _keyboard, address, suffix_. <br/>
+Both **alphabetic/numeric** and **alphabetical/numerical** are useful, although with a different meaning. <br/>
+_Alphabetic/numeric_ means _consisting of letters/numbers_: e.g. _keyboard, address, suffix_. <br/>
 _Alphabetical/numerical_ means _relating to/done in the domain of letters/numbers_:
-e.g. _alphabetical order, numerical integration_ ![](professor-spurdo) 
+e.g. _alphabetical order, numerical integration_ ![](professor-spurdo)
 
 
 ## Proper pronunciation 4
@@ -185,7 +186,7 @@ e.g. _alphabetical order, numerical integration_ ![](professor-spurdo)
 Pairs of numbers like 15&50, 17&70 etc. are notoriously similar in pronunciation...
 in fact, it's the **syllable stress** that distinguishes them much better than the
 difference between `-i` and `-i:n` suffix ![](goncern) <br/>
-In _-teens_, it's the **teen syllable** itself that's stressed: `fɪf'ti:n`, `sevn'ti:n` ![](point_right) <br/>
+In _-teens_, it's the **_teen_ syllable** itself that's stressed: `fɪf'ti:n`, `sevn'ti:n` ![](point_right) <br/>
 In _-ties_, it's the **first syllable** that's stressed instead: `'fɪfti`, `'sevnti` ![](point_left) <br/>
 The same point applies to ordinal numbers: _15th_ is `fɪf'ti:nθ` while _70th_ is `'sevntiəθ` ![](th)
 

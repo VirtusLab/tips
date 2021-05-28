@@ -15,7 +15,7 @@ or JVM with `-Djava.awt.headless=true`; these use the explicit support
 for a headless mode implemented in Chrome 59+/AWT,
 while `xvfb-run` just attaches a different display server to the process
 (and hence the process doesn't even need to know that it's being run headlessly,
-let alone provide any explicit support for a headless mode) ![](executioner)
+let alone provide any explicit support for headless mode) ![](executioner)
 
 
 ## Static code analyzers
