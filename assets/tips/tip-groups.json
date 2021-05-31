@@ -1,0 +1,62 @@
+[
+  {
+    "id": "dependency-management",
+    "name": "Dependency management"
+  },
+  {
+    "id": "docker",
+    "name": "Docker"
+  },
+  {
+    "id": "english",
+    "name": "English"
+  },
+  {
+    "id": "git",
+    "name": "Git"
+  },
+  {
+    "id": "jetbrains-products",
+    "name": "JetBrains products"
+  },
+  {
+    "id": "kubernetes",
+    "name": "Kubernetes"
+  },
+  {
+    "id": "networking",
+    "name": "Networking"
+  },
+  {
+    "id": "regex",
+    "name": "Regex"
+  },
+  {
+    "id": "scala-and-java",
+    "name": "Scala & Java"
+  },
+  {
+    "id": "shell",
+    "name": "Shell"
+  },
+  {
+    "id": "slack",
+    "name": "Slack"
+  },
+  {
+    "id": "teamwork",
+    "name": "Teamwork"
+  },
+  {
+    "id": "testing",
+    "name": "Testing"
+  },
+  {
+    "id": "versioning",
+    "name": "Versioning"
+  },
+  {
+    "id": "other",
+    "name": "Other"
+  }
+]
