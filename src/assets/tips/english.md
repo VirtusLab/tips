@@ -217,10 +217,10 @@ Btw, the pronunciations of _Pole_ and lower-case _pole_ are identical, unlike wi
 _**suit**_, both as a verb (PL: _pasować_) and noun (PL: _garnitur_) is pronounced as `su:t`
 (although pronunciation closer to `sju:t` is also common) ![](man_in_business_suit_levitating) <br/>
 _**suite**_, meaning an _apartment_/_set of rooms_, or in IT, a _set of pieces of software_/_test cases_
-is in turn pronounced as `swi:t` – exactly the same as _**sweet**_ ![](sweet_potato)
+is in turn pronounced as `swi:t` &mdash; exactly the same as _**sweet**_ ![](sweet_potato)
 
-_**kn**_ is a well-known pair of consonants where one is silent (_knife_ – `naɪf`)... but there are other, lesser-known ones:
-* _**lm**_, at the end of a word, is typically just `m`: _calm_ – `kɑ:m`, _palm_ – `pɑ:m` ![](palm_tree)
-* _**mn**_, at the end of a word, is typically just `m`: _column_ – `'kɒləm` ![](classical_building)
-* _**pn**_, at the beginning of a word, is typically just `n`: _pneumonia_ – `nju:'məʊniə` ![](lungs)
-* _**ps**_, at the beginning of a word, is typically just `s`: _pseudo_ – `sju:dəʊ`, _psycho_ – `saɪkəʊ` ![](freud)
+_**kn**_ is a well-known pair of consonants where one is silent (_knife_ &mdash; `naɪf`)... but there are other, lesser-known ones:
+* _**lm**_, at the end of a word, is typically just `m`: _calm_ &mdash; `kɑ:m`, _palm_ &mdash; `pɑ:m` ![](palm_tree)
+* _**mn**_, at the end of a word, is typically just `m`: _column_ &mdash; `'kɒləm` ![](classical_building)
+* _**pn**_, at the beginning of a word, is typically just `n`: _pneumonia_ &mdash; `nju:'məʊniə` ![](lungs)
+* _**ps**_, at the beginning of a word, is typically just `s`: _pseudo_ &mdash; `sju:dəʊ`, _psycho_ &mdash; `saɪkəʊ` ![](freud)
