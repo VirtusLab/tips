@@ -194,3 +194,33 @@ _Comment_ and _command_ are a similar example: two confusable words, with slight
 but completely different syllable stress. <br/>
 _Comment_ is `'kɒment` (first syllable stressed) ![](speech_balloon) <br/>
 _Command_ is `kə'mɑ:nd` (second syllable stressed) ![](male-police-officer)
+
+
+## Proper pronunciation 5
+### 10 Jun 2021
+
+The verb _**to polish (up)**_, sometimes used in technical language in the sense _to smooth out_ or _to tidy up_,
+is pronounced `'pɒlɪʃ` with NO diphthong ![](bez)
+
+The adjective/noun _**Polish**_ (always with an initial cap; corresponding to a certain Central European nationality or its language ![](wink))
+is in turn pronounced as `'pəʊlɪʃ,` with a diphthong ![](bolzga)
+
+A way to remember this distinction is to realize that _Polish_ is consistent in pronunciation with _**Pole**_ (`pəʊl`)
+i.e. a person from Poland (there's no ~~Polishman~~; in fact words like _Englishman_, _Dutchman_ or _Scotsman_
+are rather exceptions, apparently reserved to the nations geographically closest to England) ![](fishing_pole_and_fish) <br/>
+Btw, the pronunciations of _Pole_ and lower-case _pole_ are identical, unlike with _Polish_ and _polish_ ![](equals)
+
+
+## Proper pronunciation 6
+### 2 Aug 2021
+
+_**suit**_, both as a verb (PL: _pasować_) and noun (PL: _garnitur_) is pronounced as `su:t`
+(although pronunciation closer to `sju:t` is also common) ![](man_in_business_suit_levitating) <br/>
+_**suite**_, meaning an _apartment_/_set of rooms_, or in IT, a _set of pieces of software_/_test cases_
+is in turn pronounced as `swi:t` – exactly the same as _**sweet**_ ![](sweet_potato)
+
+_**kn**_ is a well-known pair of consonants where one is silent (_knife_ – `naɪf`)... but there are other, lesser-known ones:
+* _**lm**_, at the end of a word, is typically just `m`: _calm_ – `kɑ:m`, _palm_ – `pɑ:m` ![](palm_tree)
+* _**mn**_, at the end of a word, is typically just `m`: _column_ – `'kɒləm` ![](classical_building)
+* _**pn**_, at the beginning of a word, is typically just `n`: _pneumonia_ – `nju:'məʊniə` ![](lungs)
+* _**ps**_, at the beginning of a word, is typically just `s`: _pseudo_ – `sju:dəʊ`, _psycho_ – `saɪkəʊ` ![](freud)

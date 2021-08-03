@@ -84,3 +84,46 @@ The general approximate formula for N possible values is **1.2 × sqrt(N)**,
 so since there's 16<sup>7</sup> = 2<sup>28</sup> possible values of 7-hex-digit hash prefix, <br/>
 then if a repo has 1.2 × sqrt(2<sup>28</sup>) = 1.2 × 2<sup>14</sup> = ~20k objects (see [git-sizer](https://github.com/github/git-sizer)),
 there's a 50% chance of a prefix clash ![](crossed_swords)
+
+
+## Screen displaying insight
+### 31 May 2021
+
+Contrary to the popular belief, the 0-255 scale for each R/G/B color in RGB standard does NOT correspond to the **linear** changes
+in physical brightness (~number of emitted photons) ![](stop-sign)
+
+In fact, **50%** in a given color (`88` in hex) typically means only **~22%** of absolute physical brightness compared to `ff` ![](hushed) <br/>
+Even more surprisingly, **25%** (`44` in hex) corresponds to just **~5%** of photons of `ff` ![](not-stonks)
+
+This is related to how human vision works - we react strongly to changes in number of photons when there are few of them,
+but the same (absolute) change in number of photons doesn't make much difference to us when there are many of them ![](eye)
+
+In order to encode each R/G/B dimension effectively, the 0-255 scale corresponds to the 2.2-th root of brightness
+(i.e. its value to the power of ~0.45): 0.5<sup>2.2</sup> = 0.217..., 0.25<sup>2.2</sup> = 0.047... ![](sqrt) <br/>
+This way, the R/G/B values yield "denser" brightness values around zero, and sparser around 255 ![](chart_with_upwards_trend) <br/>
+This gives an impression of nearly-linear progression to the human eye, while saving at least one byte on each R/G/B value ![](spurdo-thumbs-up)
+
+
+## Linux desktop in a browser
+### 23 Jun 2021
+
+Have you ever wanted to have a working Linux with GUI (e.g for testing) but you didn't want to setup a VM? ![](linux) <br/>
+Here is a quick and very interesting solution: a full Linux desktop inside a docker container accessible by a web browser ![](docker) ![](web) <br/>
+Images are maintained by [linuxserver.io](http://linuxserver.io/). The instruction can be found on [dockerhub page](https://hub.docker.com/r/linuxserver/webtop).
+If you only want to see this in action, [this YouTube video](https://www.youtube.com/watch?v=Gd9bvdkIXOQ) is a sample overview of this solution
+
+
+## YAML traps
+### 23 Jul 2021
+
+Be careful about **unquoted strings** in YAML. An innocuously looking character sequence like this one:
+> gitCommitHash: 2837e65
+
+will be interpreted as a floating point **number** (2837 × 10<sup>65</sup>) rather than a string `'2837e65'` ![](no_good)
+
+Depending on how the parsed data is further processed, this might lead to cryptic errors down the line.
+This is especially important when the value is substituted via some templating mechanism (like [Helm](https://helm.sh/)),
+since then the errors can randomly come to the surface after months or years – once an ambiguous value is fed to the template ![a](this_is_fine)
+
+Similarly, `foo: 'true'` is distinct from `foo: true`, and `bar: 2021-07-23` is distinct `from bar: '2021-07-23'`
+(unlike JSON, YAML has a built-in support for dates) ![](calendar)

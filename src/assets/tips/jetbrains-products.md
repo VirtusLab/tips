@@ -22,3 +22,10 @@ to the settings and go directly to the issue by just clicking on it in the comme
 4. Now you can just click on the link in the comment (with Command on Mac), and you go directly to the issue on GitHub!
 
 This setting is kept on a per-project basis, so you don't need to worry about overwriting the settings.
+
+
+## Permanent functional keys
+### 17 May 2021
+
+On MacBook with Touch Bar you can enable permanent functional keys in PyCharm (or other Jetbrains IDE)
+by enabling the setting `Preferences > Keymap > Show F1, F2, etc. keys on the Touch Bar`

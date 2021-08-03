@@ -160,3 +160,18 @@ To avoid surprises, [shellcheck](https://www.shellcheck.net/) recommends splitti
 
 Note that this point still stands for almost **any** use of `$(...)` within a command
 (simple `FOO=$(...)` assignment being an exception), not just in the right-hand side of `export` ![](sad-spurdo)
+
+
+## Useful terminal shortcuts
+### 17 May 2021
+
+To cut the word before the cursor in a shell (bash, zsh), use `Ctrl+W` ![](scissors) <br/>
+To paste that word right at the cursor, use `Ctrl+Y` ![](copy) <br/>
+To swap the two words before the cursor, use `Alt+T` ![](arrows_counterclockwise)
+
+In case `Ctrl+C` has no effect on a given process that you'd like to terminate, you can either use:
+* `Ctrl+Z` which sends SIGTSTP (requires an extra `kill -9 %<job-number>` since the process will remain stopped in background) or
+* `Ctrl+\` which sends SIGQUIT (kills the process and dumps the core) ![a](killwithfire)
+
+Also, you can use `Ctrl+S` to suspend all output to the terminal, and `Ctrl+Q` to resume it ![](no_mouth)
+
