@@ -162,7 +162,7 @@ Note that this point still stands for almost **any** use of `$(...)` within a co
 (simple `FOO=$(...)` assignment being an exception), not just in the right-hand side of `export` ![](sad-spurdo)
 
 
-## Useful terminal shortcuts
+## Handy terminal shortcuts
 ### 17 May 2021
 
 To cut the word before the cursor in a shell (bash, zsh), use `Ctrl+W` ![](scissors) <br/>

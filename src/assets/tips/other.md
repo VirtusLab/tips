@@ -86,7 +86,7 @@ then if a repo has 1.2 × sqrt(2<sup>28</sup>) = 1.2 × 2<sup>14</sup> = ~20k ob
 there's a 50% chance of a prefix clash ![](crossed_swords)
 
 
-## Screen displaying insight
+## Physical meaning of RGB scale
 ### 31 May 2021
 
 Contrary to the popular belief, the 0-255 scale for each R/G/B color in RGB standard does NOT correspond to the **linear** changes
@@ -99,7 +99,7 @@ This is related to how human vision works &mdash; we react strongly to changes i
 but the same (absolute) change in number of photons doesn't make much difference to us when there are many of them ![](eye)
 
 In order to encode each R/G/B dimension effectively, the 0-255 scale corresponds to the 2.2-th root of brightness
-(i.e. its value to the power of ~0.45): 0.5<sup>2.2</sup> = 0.217..., 0.25<sup>2.2</sup> = 0.047... ![](sqrt) <br/>
+(i.e. its value to the power of ~0.45): 0.5<sup>2.2</sup> = 0.217... ~= 22%, 0.25<sup>2.2</sup> = 0.047... ~= 5% ![](sqrt) <br/>
 This way, the R/G/B values yield "denser" brightness values around zero, and sparser around 255 ![](chart_with_upwards_trend) <br/>
 This gives an impression of nearly-linear progression to the human eye, while saving at least one byte on each R/G/B value ![](spurdo-thumbs-up)
 

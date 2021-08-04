@@ -50,6 +50,6 @@ saving the need to open the emoji selector dialog:
 ## Quick Hangouts
 ### 22 Jun 2021
 
-In Slack workspaces which have Google+ Hangouts integration activated,
+In Slack workspaces which have [Google+ Hangouts integration](https://slack.com/apps/A0F7YS351-google-hangouts) activated,
 type `/hangout` to start a **new Google Meet call** and invite other Slack users ![](slack_call) <br/>
 No need to create the meeting & copy the link from the Hangouts widget in Gmail ![](gmail)
